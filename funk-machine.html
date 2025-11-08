@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funk Machine</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="funk-machine.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-grid"></div>
+    <div class="neon-lines"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="artist-header">
+            <div class="logo-container">
+                <img src="Media/FunkMachine.png" alt="Funk Machine" class="artist-logo">
+            </div>
+            <p class="artist-tagline">FUNK • GROOVE • LOVE</p>
+        </header>
+
+        <!-- Music Player -->
+        <div class="player-container">
+            <div class="album-art-container">
+                <img src="Media/FunkMachineEra_WLogo.png" alt="Funk Machine Era" class="album-art">
+                <h2 class="album-title">FUNK MACHINE ERA</h2>
+            </div>
+            <div class="player-header">
+                <div class="now-playing">
+                    <span class="pulse-dot"></span>
+                    <span id="currentTrackName">Sélectionnez une piste</span>
+                </div>
+                <div class="track-info">
+                    <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-handle" id="progressHandle"></div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button class="control-btn" id="shuffleBtn" title="Aléatoire">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/>
+                    </svg>
+                </button>
+                
+                <button class="control-btn" id="prevBtn" title="Précédent">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                    </svg>
+                </button>
+                
+                <button class="control-btn play-btn" id="playBtn" title="Lecture">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg class="pause-icon hidden" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 4h4v16H6zM14 4h4v16h-4z"/>
+                    </svg>
+                </button>
+                
+                <button class="control-btn" id="nextBtn" title="Suivant">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 18h2V6h-2zm-11-7l8.5-6v12z"/>
+                    </svg>
+                </button>
+                
+                <button class="control-btn" id="repeatBtn" title="Répéter">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 1l4 4-4 4"/>
+                        <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                        <path d="M7 23l-4-4 4-4"/>
+                        <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                    </svg>
+                    <span class="repeat-one hidden">1</span>
+                </button>
+            </div>
+
+            <!-- Volume Control -->
+            <div class="volume-control">
+                <button class="volume-btn" id="volumeBtn">
+                    <svg class="volume-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                    </svg>
+                    <svg class="mute-icon hidden" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                    </svg>
+                </button>
+                <div class="volume-slider">
+                    <input type="range" id="volumeSlider" min="0" max="100" value="70">
+                    <div class="volume-fill" id="volumeFill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lyrics Section -->
+        <div class="lyrics-container collapsed" id="lyricsContainer">
+            <div class="lyrics-header">
+                <div class="lyrics-title-wrapper">
+                    <h2 class="lyrics-title">
+                        <span class="neon-text">LYRICS</span>
+                    </h2>
+                    <span class="lyrics-hint" id="lyricsHint">Sélectionnez une piste pour voir les paroles</span>
+                </div>
+                <button class="lyrics-toggle-btn" id="lyricsToggleBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="lyrics-content" id="lyricsContent">
+            </div>
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist-container">
+            <h2 class="playlist-title">
+                <span class="neon-text">PLAYLIST</span>
+            </h2>
+            <div class="playlist" id="playlist">
+                <div class="track-item" data-src="Media/Funk Machine - Let's Funk Tonight.mp3">
+                    <div class="track-number">01</div>
+                    <div class="track-details">
+                        <div class="track-name">Let's Funk Tonight</div>
+                        <div class="track-duration">3:14</div>
+                    </div>
+                    <div class="track-visualizer">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+                
+                <div class="track-item" data-src="Media/Funk Machine - Where's His Left Arm.mp3">
+                    <div class="track-number">02</div>
+                    <div class="track-details">
+                        <div class="track-name">Where's His Left Arm</div>
+                        <div class="track-duration">4:08</div>
+                    </div>
+                    <div class="track-visualizer">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+                
+                <div class="track-item" data-src="Media/Funk Machine - Gold Saucer.mp3">
+                    <div class="track-number">03</div>
+                    <div class="track-details">
+                        <div class="track-name">Gold Saucer</div>
+                        <div class="track-duration">3:38</div>
+                    </div>
+                    <div class="track-visualizer">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+                
+                <div class="track-item" data-src="Media/Funk Machine - Garlond Groove.mp3">
+                    <div class="track-number">04</div>
+                    <div class="track-details">
+                        <div class="track-name">Garlond Groove</div>
+                        <div class="track-duration">3:19</div>
+                    </div>
+                    <div class="track-visualizer">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+                
+                <div class="track-item" data-src="Media/Funk Machine - Mist 9.mp3">
+                    <div class="track-number">05</div>
+                    <div class="track-details">
+                        <div class="track-name">Mist 9</div>
+                        <div class="track-duration">3:59</div>
+                    </div>
+                    <div class="track-visualizer">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+                
+                <div class="track-item" data-src="Media/Funk Machine - Alys In Blue.mp3">
+                    <div class="track-number">06</div>
+                    <div class="track-details">
+                        <div class="track-name">Alys In Blue</div>
+                        <div class="track-duration">3:49</div>
+                    </div>
+                    <div class="track-visualizer">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+    <script src="funk-machine.js"></script>
+</body>
+</html>
