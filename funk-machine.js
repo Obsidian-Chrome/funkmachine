@@ -690,16 +690,16 @@ function init() {
         
         // Add click event
         item.addEventListener('click', (e) => {
-            // Don't load track if clicking on download button
-            if (e.target.closest('.track-download-btn')) {
+            // Don't load track if clicking on download or YouTube button
+            if (e.target.closest('.track-download-btn') || e.target.closest('.track-youtube-btn')) {
                 return;
             }
             loadTrack(index);
         });
     });
     
-    // Prevent download button from triggering track load
-    document.querySelectorAll('.track-download-btn').forEach(btn => {
+    // Prevent download and YouTube buttons from triggering track load
+    document.querySelectorAll('.track-download-btn, .track-youtube-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
         });

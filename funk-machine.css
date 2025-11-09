@@ -625,6 +625,7 @@ body {
     50% { height: 90%; }
 }
 
+.track-youtube-btn,
 .track-download-btn {
     display: flex;
     align-items: center;
@@ -641,6 +642,7 @@ body {
     margin-left: 10px;
 }
 
+.track-youtube-btn:hover,
 .track-download-btn:hover {
     background: var(--neon-cyan);
     color: var(--dark-bg);
@@ -648,6 +650,7 @@ body {
     transform: scale(1.1);
 }
 
+.track-youtube-btn i,
 .track-download-btn i {
     font-size: 1rem;
 }
