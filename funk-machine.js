@@ -390,7 +390,258 @@ Yeah…
 Alys, don’t walk away,
 The night’s still young, the groove still plays.
 Blue hair, brown eyes, sweet perfume…
-You turned the dance floor into a bedroom.`
+You turned the dance floor into a bedroom.`,
+    "I'm the Fun in Funk": `[Intro]
+Uh! Yeah!
+You feel that groove?
+Well baby, that's me —
+I'm the fun in funk!
+
+[Verse 1]
+Step aside, I'm comin' through,
+Bass in hand, got that shine on my shoe.
+You talk cool, but I walk groove,
+Every beat I drop makes your body move!
+
+Feelin' fine, I turn it up high,
+Sweat and rhythm, we electrify!
+Got no rules, I got no plan,
+Just a funky heart and a mic in my hand!
+
+[Pre-Chorus]
+Slide to the left, shake it to the right,
+We don't stop till the morning light!
+No time for chill, no time for junk —
+I'm the soul, the sound, the funk!
+
+[Chorus]
+I'm the fun in funk, the kick in the beat!
+The fire in your soul and the groove in your feet!
+When I hit that stage, it's a funky crime —
+I'm the fun in funk, baby, every time!
+
+[Verse 2]
+Slick shades on, got a disco smile,
+Turnin' every crowd into a fever file.
+My bass don't lie, it tells the truth —
+If it don't move your hips, it's uncouth!
+
+Can you feel it? That funky flame?
+It's callin' your name in neon rain.
+The night's alive, we don't come down —
+We own this city, we funk this town!
+
+[Bridge]
+F-U-N-K — say my name!
+Doctor groove in the hall of fame!
+Raise your hands, let the rhythm flow,
+Funk Machine's here — now you know!
+
+Got the slap, got the soul, got that shine —
+You bring the crowd, I'll bring the line!
+
+[Chorus]
+I'm the fun in funk, the bass in your bones!
+The spark in your heart and the heat in your tones!
+I'm the beat that breaks your chains apart —
+The fun in funk, baby, straight from the heart!
+
+[Outro]
+Uh!
+Don't forget my name when the lights go out —
+Funk Machine, baby, that's what I'm about!
+You bring the night, I bring the junk —
+'Cause I'm the fun… in FUNK!`,
+    "The Groove Protocol": `[Intro]
+"Attention, citizens of Neon City…
+The beat has been compromised.
+Initiating recovery sequence —
+The Groove Protocol is now in effect."
+
+[Verse 1]
+Too many people livin' outta sync,
+Cold machines, they forgot how to think.
+No pulse, no rhythm in their soul,
+But I'm the doc — and I'm takin' control.
+
+Plug in your heart, let me realign,
+Reboot your soul to the tempo divine.
+I got the bassline, hot and illegal,
+Welcome to the Groove Cathedral!
+
+[Pre-Chorus]
+You can't fake it, can't deny,
+Once the funk hits, you testify.
+The system shakes, the lights go wild,
+Protocol's active — and you're beguiled!
+
+[Chorus]
+It's The Groove Protocol — feel the code ignite,
+From your head to your hips, let your body rewrite!
+Neon sparks and the bass explode,
+We're uploadin' funk — overload!
+
+It's The Groove Protocol — break the rule of cool,
+Get loud, get hot, let the rhythm rule!
+No resistance, no control,
+Let the funk take your soul!
+
+[Verse 2]
+Wires hummin', lights turn blue,
+Every move I make's electric too.
+Your data's dirty, but I don't mind,
+I clean corruption — one groove at a time.
+
+Bass so deep it shakes the core,
+Funk Machine's knockin' at your door.
+No firewall can keep me back,
+'Cause the groove's my coded attack!
+
+[Bridge]
+"Funk is the law.
+Rhythm is the order.
+Obey the bass.
+Dance... or be deleted."
+
+[Final Chorus]
+It's The Groove Protocol — global sync tonight,
+Upload your body, download the light!
+Bassline burnin', system overload,
+Funk Machine online, in full node!
+
+It's The Groove Protocol — let the night unfold,
+Turn up the heat, melt the cold!
+No escape, no control —
+You're now part of the Groove Protocol!
+
+[Outro]
+"Transmission complete…
+Patient stabilized.
+Funk restored.
+End of file — Groove Protocol."`,
+    "The Surgeon": `[Intro]
+Yeah...
+They call me The Surgeon.
+'Cause when the groove is sick...
+I make it bleed funk.
+
+[Verse 1]
+Step in the room, white coat, gold chain,
+Bass in my hand, I'm the cure for your pain.
+Heartbeat's jumpin', rhythm flatlined,
+Scalpel in the mix — now watch it come alive!
+
+Midnight fever, sweat on the floor,
+I slice that groove, you beg for more.
+No anesthesia, I work it raw,
+Doctor of funk with a disco law!
+
+[Pre-Chorus]
+I don't do mercy, baby, I do bass,
+One clean cut and I'll fix your face.
+You want rhythm? I'll give you some —
+Step right up, let me numb your drum!
+
+[Chorus]
+They call me The Surgeon, I cut the beat clean,
+Slice through the silence, make the rhythm scream!
+Funk Machine's in the house tonight,
+Operating till the groove feels right!
+
+[Verse 2]
+Sharpen my strings, sterilize that tone,
+Every bassline's carved to the bone.
+Bring me a patient with no soul left,
+I'll funk 'em up till there's nothing left!
+
+Neon City glows, hearts on the wire,
+I groove precise, I feed the fire.
+From uptown haze to the midnight docks,
+Everybody knows — it's Funk Machine o'clock!
+
+[Bridge]
+Doctor! Doctor! Can you feel that funk?
+Give me rhythm! Make it stunk!
+
+Scalpel... bassline... incision clean,
+Open the groove, insert the machine!
+BPM's risin', heart's on fire,
+I'm the Surgeon — pure desire!
+
+[Final Chorus]
+They call me The Surgeon, ruler of the groove,
+Cut so deep, you can't help but move!
+Basslines burnin', lights ignite,
+Healin' souls with funk tonight!
+
+They call me The Surgeon, sound so mean,
+Funk so tight, it's medically clean!
+Funk Machine, yeah, I'm the cure —
+Once you taste the groove, you'll want more!
+
+[Outro]
+Scalpel down… mission complete.
+Another night saved by the beat.
+Name's Funk Machine — The Surgeon.
+And baby… the operation was perfectly funky.`,
+    "Neon Sunrise": `[Intro]
+The city's still humming,
+Last beat fading slow…
+Lights turn to gold,
+And I can feel it — the afterglow.
+
+[Verse 1]
+There's glitter on the sidewalk,
+And rhythm in the air,
+Every soul that danced tonight
+Left a little groove somewhere.
+
+My bass is tired but smiling,
+She knows the night was true,
+We fed the heart of Neon City,
+Now she's shining new.
+
+[Pre-Chorus]
+The streets are quiet, but my pulse still flies,
+The funk don't sleep, it just close its eyes.
+Another dawn, another flame,
+The groove remains — it knows my name.
+
+[Chorus]
+Neon Sunrise — painting dreams in light,
+The funk fades slow, but it feels so right.
+Every beat we played, every heart we moved,
+Still echoes on... yeah, the city's proof.
+
+Neon Sunrise — warmth on chrome,
+Wherever I go, the groove's my home.
+
+[Verse 2]
+Last lovers leaving the dancefloor slow,
+Eyes half-closed, still in the glow.
+Talkbox whispers, machines at rest,
+The Doc retires — he did his best.
+
+And somewhere deep, beneath the sound,
+A pulse keeps moving underground.
+'Cause funk's a fire that never dies,
+It just hides behind the sunrise.
+
+[Bridge]
+
+[Final Chorus]
+Neon Sunrise — the night's last kiss,
+The groove is gone, but I still feel bliss.
+Let the morning find my song,
+Funk Machine's heart beats on and on.
+
+[Outro]
+The lights fade out…
+but the rhythm stays.
+Another night, another city —
+same funk, new rays.
+
+Funk… Machiiiiiine…`
 };
 
 // Player State
@@ -438,7 +689,20 @@ function init() {
         });
         
         // Add click event
-        item.addEventListener('click', () => loadTrack(index));
+        item.addEventListener('click', (e) => {
+            // Don't load track if clicking on download button
+            if (e.target.closest('.track-download-btn')) {
+                return;
+            }
+            loadTrack(index);
+        });
+    });
+    
+    // Prevent download button from triggering track load
+    document.querySelectorAll('.track-download-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
     });
     
     // Set initial volume

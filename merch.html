@@ -74,21 +74,24 @@
                 </div>
 
                 <!-- Merch Item -->
-                <div class="merch-item">
+                <div class="merch-item" id="tshirt-f-item">
                     <div class="merch-image merch-image-zoom" data-img="Media/FunkMachine_F.png">
-                        <img src="Media/FunkMachine_F.png" alt="T-shirt Féminin" class="merch-preview-img">
+                        <img src="Media/FunkMachine_F.png" alt="T-shirt Féminin" class="merch-preview-img" id="tshirt-f-img">
+                        <button class="version-switch-btn-overlay" id="tshirt-f-switch" title="Changer de version">
+                            <i class="fa-solid fa-repeat"></i>
+                        </button>
                         <div class="zoom-overlay">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
                     <div class="merch-details">
-                        <h3 class="merch-title">T-shirt [F]</h3>
+                        <h3 class="merch-title" id="tshirt-f-title">T-shirt [F]</h3>
                         <p class="merch-description">T-shirt officiel Funk Machine - Modèle Féminin</p>
-                        <div class="merch-info">
+                        <div class="merch-info" id="tshirt-f-info">
                             <span class="merch-size">19 MO</span>
                             <span class="merch-format">PMP</span>
                         </div>
-                        <div class="merch-compatibility">
+                        <div class="merch-compatibility" id="tshirt-f-compatibility">
                             <h4 class="compatibility-title">Compatibilité :</h4>
                             <ul class="compatibility-list">
                                 <li>Bibo</li>
@@ -101,7 +104,7 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="Media/Funk Machine t-shirt [F].pmp" download class="merch-download-btn">
+                    <a href="Media/Funk Machine t-shirt [F].pmp" download class="merch-download-btn" id="tshirt-f-download">
                         <i class="fa-solid fa-download"></i>
                         Télécharger
                     </a>
@@ -144,6 +147,16 @@
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-content" id="lightboxImg">
     </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="https://discord.gg/gNxGzBnh" target="_blank" rel="noopener noreferrer" class="footer-label-link">
+                <img src="Media/noctura_records.png" alt="Noctura Records" class="footer-label-logo">
+            </a>
+            <p class="footer-text">© Funk Machine • Noctura Records</p>
+        </div>
+    </footer>
 
     <script src="funk-machine.js"></script>
     <script src="merch.js"></script>

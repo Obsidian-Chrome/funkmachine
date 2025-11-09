@@ -625,6 +625,33 @@ body {
     50% { height: 90%; }
 }
 
+.track-download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: var(--neon-cyan);
+    border: 2px solid var(--neon-cyan);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.track-download-btn:hover {
+    background: var(--neon-cyan);
+    color: var(--dark-bg);
+    box-shadow: 0 0 15px rgba(68, 224, 189, 0.5);
+    transform: scale(1.1);
+}
+
+.track-download-btn i {
+    font-size: 1rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .artist-logo {
@@ -1191,6 +1218,42 @@ body {
     text-shadow: 0 0 10px var(--neon-cyan);
 }
 
+.version-switch-btn-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: rgba(10, 15, 13, 0.9);
+    color: var(--neon-green);
+    border: 2px solid var(--neon-green);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.version-switch-btn-overlay:hover {
+    background: var(--neon-green);
+    color: var(--dark-bg);
+    box-shadow: 0 0 15px rgba(42, 184, 154, 0.5);
+    transform: scale(1.1);
+}
+
+.version-switch-btn-overlay i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.version-switch-btn-overlay:hover i {
+    transform: rotate(180deg);
+}
+
 .merch-description {
     color: var(--text-primary);
     font-size: 0.95rem;
@@ -1245,7 +1308,7 @@ body {
     font-family: 'Orbitron', monospace;
     font-size: 0.85rem;
     color: var(--text-secondary);
-    padding: 5px 12px;
+    padding: 4px 10px;
     background: rgba(68, 224, 189, 0.1);
     border: 1px solid rgba(68, 224, 189, 0.3);
     border-radius: 5px;
@@ -1529,11 +1592,73 @@ body {
     transform: scale(1.2);
 }
 
+/* Footer */
+.site-footer {
+    position: relative;
+    z-index: 10;
+    margin-top: 80px;
+    padding: 40px 20px;
+    background: rgba(10, 15, 13, 0.8);
+    border-top: 2px solid rgba(68, 224, 189, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-label-link {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-label-logo {
+    width: 100px;
+    height: auto;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 5px rgba(68, 224, 189, 0.3));
+    transition: all 0.3s ease;
+}
+
+.footer-label-link:hover .footer-label-logo {
+    opacity: 1;
+    filter: drop-shadow(0 0 15px rgba(68, 224, 189, 0.6))
+            drop-shadow(0 0 25px rgba(68, 224, 189, 0.4));
+    transform: scale(1.05);
+}
+
+.footer-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+    text-align: center;
+    opacity: 0.7;
+}
+
 /* Responsive for new pages */
 @media (max-width: 768px) {
     .nav-menu {
         flex-direction: column;
         gap: 15px;
+    }
+    
+    .site-footer {
+        margin-top: 40px;
+        padding: 30px 15px;
+    }
+    
+    .footer-label-logo {
+        width: 80px;
+    }
+    
+    .footer-text {
+        font-size: 0.8rem;
     }
     
     .about-header {

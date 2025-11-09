@@ -36,4 +36,70 @@ document.addEventListener('DOMContentLoaded', function() {
         lightbox.style.display = 'none';
         document.body.style.overflow = 'auto'; // Restore scrolling
     }
+
+    // T-shirt F Version Switch
+    const switchBtn = document.getElementById('tshirt-f-switch');
+    const tshirtImg = document.getElementById('tshirt-f-img');
+    const tshirtTitle = document.getElementById('tshirt-f-title');
+    const tshirtInfo = document.getElementById('tshirt-f-info');
+    const tshirtCompatibility = document.getElementById('tshirt-f-compatibility');
+    const tshirtDownload = document.getElementById('tshirt-f-download');
+    const tshirtZoomContainer = tshirtImg.closest('.merch-image-zoom');
+
+    let isAltVersion = false;
+
+    const versions = {
+        standard: {
+            image: 'Media/FunkMachine_F.png',
+            title: 'T-shirt [F]',
+            size: '19 MO',
+            download: 'Media/Funk Machine t-shirt [F].pmp',
+            compatibility: ['Bibo', 'Rue', 'Bimbo', 'Uranus', 'YAB', 'Lavabod & Larue', 'RUEXB+']
+        },
+        alt: {
+            image: 'Media/FunkMachine_FAlt.png',
+            title: 'T-shirt [F-Alt]',
+            size: '20 MO',
+            download: 'Media/Funk Machine t-shirt [F-Alt].pmp',
+            compatibility: ['Rue', 'YAB', 'Lavabod & Larue']
+        }
+    };
+
+    switchBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        isAltVersion = !isAltVersion;
+        const currentVersion = isAltVersion ? versions.alt : versions.standard;
+
+        // Update image
+        tshirtImg.src = currentVersion.image;
+        tshirtZoomContainer.dataset.img = currentVersion.image;
+
+        // Update title
+        tshirtTitle.textContent = currentVersion.title;
+
+        // Update info
+        tshirtInfo.innerHTML = `
+            <span class="merch-size">${currentVersion.size}</span>
+            <span class="merch-format">PMP</span>
+        `;
+
+        // Update compatibility
+        const compatibilityList = currentVersion.compatibility.map(item => `<li>${item}</li>`).join('');
+        tshirtCompatibility.innerHTML = `
+            <h4 class="compatibility-title">Compatibilité :</h4>
+            <ul class="compatibility-list">
+                ${compatibilityList}
+            </ul>
+        `;
+
+        // Update download link
+        tshirtDownload.href = currentVersion.download;
+
+        // Add animation effect
+        switchBtn.querySelector('i').style.transform = 'rotate(180deg)';
+        setTimeout(() => {
+            switchBtn.querySelector('i').style.transform = 'rotate(0deg)';
+        }, 300);
+    });
 });
