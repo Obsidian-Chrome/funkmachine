@@ -41,10 +41,10 @@
             <div class="merch-grid">
                 <!-- Merch Item -->
                 <div class="merch-item">
-                    <div class="merch-image">
-                        <div class="merch-placeholder merch-with-logo">
-                            <img src="Media/FunkMachine.png" alt="Logo" class="merch-logo-bg">
-                            <i class="fa-solid fa-shirt"></i>
+                    <div class="merch-image merch-image-zoom" data-img="Media/FunkMachine_M.png">
+                        <img src="Media/FunkMachine_M.png" alt="T-shirt Masculin" class="merch-preview-img">
+                        <div class="zoom-overlay">
+                            <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
                     <div class="merch-details">
@@ -75,10 +75,10 @@
 
                 <!-- Merch Item -->
                 <div class="merch-item">
-                    <div class="merch-image">
-                        <div class="merch-placeholder merch-with-logo">
-                            <img src="Media/FunkMachine.png" alt="Logo" class="merch-logo-bg">
-                            <i class="fa-solid fa-shirt"></i>
+                    <div class="merch-image merch-image-zoom" data-img="Media/FunkMachine_F.png">
+                        <img src="Media/FunkMachine_F.png" alt="T-shirt Féminin" class="merch-preview-img">
+                        <div class="zoom-overlay">
+                            <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
                     <div class="merch-details">
@@ -109,10 +109,10 @@
 
                 <!-- Merch Item -->
                 <div class="merch-item">
-                    <div class="merch-image">
-                        <div class="merch-placeholder merch-with-logo">
-                            <img src="Media/FunkMachine.png" alt="Logo" class="merch-logo-bg">
-                            <i class="fa-solid fa-shirt"></i>
+                    <div class="merch-image merch-image-zoom" data-img="Media/FunkMachine_MHR.png">
+                        <img src="Media/FunkMachine_MHR.png" alt="T-shirt Hrothgar/Roegadyn" class="merch-preview-img">
+                        <div class="zoom-overlay">
+                            <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
                     <div class="merch-details">
@@ -139,6 +139,13 @@
         </div>
     </div>
 
+    <!-- Lightbox Modal -->
+    <div id="imageLightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+    </div>
+
     <script src="funk-machine.js"></script>
+    <script src="merch.js"></script>
 </body>
 </html>
