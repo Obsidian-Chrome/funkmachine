@@ -1060,6 +1060,65 @@ body {
     font-size: 1.2rem;
 }
 
+/* Past Concert Styles */
+.past-concert {
+    opacity: 0.6;
+    position: relative;
+}
+
+.past-concert::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.past-concert:hover {
+    opacity: 0.7;
+    transform: translateX(5px);
+}
+
+.past-concert .concert-date {
+    background: rgba(128, 128, 128, 0.5);
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+}
+
+.past-concert .concert-venue {
+    color: var(--text-secondary);
+    text-shadow: none;
+}
+
+.past-concert .concert-btn {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.past-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(128, 128, 128, 0.3);
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 20px;
+    color: var(--text-secondary);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+}
+
+.past-badge i {
+    font-size: 0.9rem;
+}
+
 /* Merch Container */
 .merch-container {
     background: var(--card-bg);
@@ -1435,6 +1494,7 @@ body {
 
 .bio-text p {
     margin: 0 0 20px 0;
+    text-align: justify;
 }
 
 .bio-text p:last-child {
@@ -1624,13 +1684,15 @@ body {
     width: 100px;
     height: auto;
     opacity: 0.7;
-    filter: drop-shadow(0 0 5px rgba(68, 224, 189, 0.3));
+    filter: brightness(0) saturate(100%) invert(78%) sepia(28%) saturate(1084%) hue-rotate(118deg) brightness(95%) contrast(92%)
+            drop-shadow(0 0 5px rgba(68, 224, 189, 0.3));
     transition: all 0.3s ease;
 }
 
 .footer-label-link:hover .footer-label-logo {
     opacity: 1;
-    filter: drop-shadow(0 0 15px rgba(68, 224, 189, 0.6))
+    filter: brightness(0) saturate(100%) invert(78%) sepia(28%) saturate(1084%) hue-rotate(118deg) brightness(95%) contrast(92%)
+            drop-shadow(0 0 15px rgba(68, 224, 189, 0.6))
             drop-shadow(0 0 25px rgba(68, 224, 189, 0.4));
     transform: scale(1.05);
 }
