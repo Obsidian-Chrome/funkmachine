@@ -1,3 +1,32 @@
+// Albums Database
+const albumsDatabase = {
+    era: {
+        name: "Funk Machine Era",
+        image: "Media/FunkMachineEra_WLogo.png",
+        tracks: [] // Will be populated from HTML
+    },
+    covers: {
+        name: "Covers",
+        image: "Media/FunkMachineEra_WLogo.png",
+        tracks: [
+            {
+                name: "Let's Boogie",
+                src: "Media/Funk Machine - Let's Boogie [Cover].mp3",
+                duration: "3:14",
+                youtube: "https://www.youtube.com/watch?v=7bA_aMZmWvY"
+            },
+            {
+                name: "Golden Liar",
+                src: "Media/Funk Machine - Golden Liar [Cover].mp3",
+                duration: "3:32",
+                youtube: "https://www.youtube.com/watch?v=UdYoM1EB6nE"
+            }
+        ]
+    }
+};
+
+let currentAlbum = 'era';
+
 // Lyrics Database
 const lyricsDatabase = {
     "Let's Funk Tonight": `[Intro]
@@ -641,7 +670,130 @@ but the rhythm stays.
 Another night, another city —
 same funk, new rays.
 
-Funk… Machiiiiiine…`
+Funk… Machiiiiiine…`,
+    "Let's Boogie": `[Intro]
+
+Ooh yeah baby
+It's tima' disco down now yeah
+Come on let's get it on
+'Til the break of dawn, baby hey yeah
+Yeah yeah, let we groove it
+
+[Chorus]
+
+Let's boogie
+Let's dance
+Two funky cops and we get him now
+
+Let's boogie
+Let's dance
+When we're on the floor, we don't mess around
+
+[Verse 1]
+
+We fight crime, every day
+Tryin' to put the bad guys away
+Word on the street is that we're the best
+Do they mean how we lock 'em up or how we disco dance
+
+[Verse 2]
+
+Born to disco we can dance the night away (night away)
+But don't worry we catch crooks everyday (everyday)
+Crime lords out there, you'd better beware
+I'll lock you up for life if you touch my hair
+
+[Chorus]
+
+[Verse 3]
+
+Everybody was kung-fu fighting, when I was young
+My style of fighting, I don't need a gun (need a gun)
+But at night when the DJ plays the groove
+That's when me and Ace we really move
+
+[Verse 4]
+
+My people's music and styling my hair
+Became a cop 'cause I really care
+But at night it's time to feel the beat
+That's when we really start to move our feet
+
+[Chorus]
+
+[Bridge]
+
+Bad guys, be aware
+When we're coming after you
+You know that you're through
+But right now we dance
+DJ play that groove again
+Now that's time to
+Get down (get down), get down (get down), get down (get down)
+Get down tonight
+
+[Chorus x3]`,
+    "Golden Liar": `[Intro]
+(Whoa)
+(Whoa-oh-oh)
+(Hey)
+
+[Verse 1]
+Uso mo kasanereba itsuka wa shinjitsu
+Kikazaru ze shinju shiwari no kodo
+Honto ni natta uso de gomakasenai
+Yuitsu tashika na I love you
+
+[Pre-Chorus]
+(Help me baby)
+(Baby, baby, baby)
+
+[Chorus]
+Uso mo shinjitsu mo mune ni sono ai o
+(Ah-ah-ah) (ooh-ooh-ooh) kono te de tsukamu ni
+Yume de (ah-ah-ah) (ooh-ooh-ooh) samenai de kimi no mae de wa
+Tsuri kata o shinjitsu no shotai wa kimi o ai suru gaika
+Kimi no sei de, kimi no sei de, golden liar
+
+[Verse 2]
+(Help me baby)
+Majime na yatsu ga son suru jidai de
+Chudan da kekkai nasu toori katate de katai ano kuni
+
+[Pre-Chorus]
+(Chikita)
+Barenai ai ni eien chikai na
+(Whoa-oh-oh)
+(Hey, hey, hey)
+
+[Chorus]
+Kuchi wa wazawai mo saiwai mo
+(Ah-ah-ah) (ooh-ooh-ooh) mayu ka ni natsu iri
+Kimi no (ah-ah-ah) (ooh-ooh-ooh) samenai de kimi no mae de wa
+Tsuri kata o shinjitsu no shotai wa kimi o ai suru gaika
+Dare mo ga kitto wakareta kedo golden liar
+
+[Bridge]
+Golden liar
+(Ah-ah-ah) (ooh-ooh-ooh)
+(Ah-ah-ah) (ooh-ooh-ooh)
+(Ah-ah-ah) (ooh-ooh-ooh)
+(Ah-ah-ah) (ooh-ooh-ooh)
+
+[Chorus]
+Uso mo shinjitsu mo mune ni sono ai o
+(Ah-ah-ah) (ooh-ooh-ooh) kono te de tsukamu ni
+Yume de (ah-ah-ah) (ooh-ooh-ooh) samenai de kimi no mae de wa
+Tsuri kata o shinjitsu no shotai wa kimi o ai suru gaika
+Kimi no sei de, kimi no sei de, golden liar
+
+[Outro]
+Uso wa tsukete jibun o mamotte okubyo ai ai ai ai
+Sore ga zutto damasenai no ga kimi no fire
+(Whoa-oh-oh)
+(Whoa-oh-oh)
+Uso mo shinjitsu mo mune ni sono ai o
+(Whoa)`
 };
 
 // Player State
@@ -1021,6 +1173,148 @@ document.addEventListener('mousemove', (e) => {
 document.addEventListener('mouseup', () => {
     isDragging = false;
 });
+
+// Album Selector
+const albumSwitchBtn = document.getElementById('albumSwitchBtn');
+const albumDropdown = document.getElementById('albumDropdown');
+const albumOptions = document.querySelectorAll('.album-option');
+const albumArtContainer = document.getElementById('albumArtContainer');
+const albumArtImg = document.getElementById('albumArtImg');
+const albumTitle = document.getElementById('albumTitle');
+const currentAlbumName = document.getElementById('currentAlbumName');
+
+// Toggle dropdown
+if (albumSwitchBtn) {
+    albumSwitchBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        albumSwitchBtn.classList.toggle('active');
+        albumDropdown.classList.toggle('show');
+    });
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+    if (albumDropdown && !albumDropdown.contains(e.target) && e.target !== albumSwitchBtn) {
+        albumSwitchBtn.classList.remove('active');
+        albumDropdown.classList.remove('show');
+    }
+});
+
+// Switch album
+albumOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        const albumId = option.dataset.album;
+        
+        if (albumId === currentAlbum) {
+            albumDropdown.classList.remove('show');
+            albumSwitchBtn.classList.remove('active');
+            return;
+        }
+        
+        // Update active state
+        albumOptions.forEach(opt => opt.classList.remove('active'));
+        option.classList.add('active');
+        
+        // Close dropdown
+        albumDropdown.classList.remove('show');
+        albumSwitchBtn.classList.remove('active');
+        
+        // Switch album with animation
+        switchAlbum(albumId);
+    });
+});
+
+function switchAlbum(albumId) {
+    const album = albumsDatabase[albumId];
+    
+    if (!album) return;
+    
+    // Add switching animation
+    albumArtContainer.classList.add('switching');
+    
+    // Stop current playback
+    if (player.isPlaying) {
+        togglePlay();
+    }
+    
+    setTimeout(() => {
+        // Update album info
+        currentAlbum = albumId;
+        albumArtImg.src = album.image;
+        albumArtImg.alt = album.name;
+        albumTitle.textContent = album.name.toUpperCase();
+        currentAlbumName.textContent = album.name;
+        
+        // Update playlist
+        if (albumId === 'covers') {
+            // Generate playlist HTML for Covers album
+            let playlistHTML = '';
+            album.tracks.forEach((track, index) => {
+                playlistHTML += `
+                    <div class="track-item" data-src="${track.src}">
+                        <div class="track-number">${String(index + 1).padStart(2, '0')}</div>
+                        <div class="track-details">
+                            <div class="track-name">${track.name}</div>
+                            <div class="track-duration">${track.duration}</div>
+                        </div>
+                        <div class="track-visualizer">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        ${track.youtube ? `<a href="${track.youtube}" target="_blank" rel="noopener noreferrer" class="track-youtube-btn" title="Écouter sur YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>` : ''}
+                        <a href="${track.src}" download class="track-download-btn" title="Télécharger MP3">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                `;
+            });
+            
+            playlist.innerHTML = playlistHTML;
+            
+            // Clear lyrics
+            lyricsContent.innerHTML = '';
+            lyricsHint.style.display = 'block';
+            currentTrackName.textContent = 'Sélectionnez une piste';
+            
+            // Reset and reload tracks
+            player.tracks = [];
+            player.currentTrack = 0;
+            
+            // Re-initialize tracks
+            const newTrackItems = document.querySelectorAll('.track-item');
+            newTrackItems.forEach((item, index) => {
+                player.tracks.push({
+                    element: item,
+                    src: item.dataset.src,
+                    name: item.querySelector('.track-name').textContent,
+                    duration: item.querySelector('.track-duration').textContent
+                });
+                
+                // Add click event
+                item.addEventListener('click', (e) => {
+                    if (e.target.closest('.track-download-btn') || e.target.closest('.track-youtube-btn')) {
+                        return;
+                    }
+                    loadTrack(index);
+                });
+            });
+            
+            // Prevent download buttons from triggering track load
+            document.querySelectorAll('.track-download-btn, .track-youtube-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                });
+            });
+        } else {
+            // Reload era tracks (refresh page)
+            location.reload();
+        }
+        
+        // Remove animation class
+        albumArtContainer.classList.remove('switching');
+    }, 300);
+}
 
 // Initialize on load
 document.addEventListener('DOMContentLoaded', init);

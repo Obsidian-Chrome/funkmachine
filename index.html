@@ -34,9 +34,28 @@
 
         <!-- Music Player -->
         <div class="player-container">
-            <div class="album-art-container">
-                <img src="Media/FunkMachineEra_WLogo.png" alt="Funk Machine Era" class="album-art">
-                <h2 class="album-title">FUNK MACHINE ERA</h2>
+            <!-- Album Selector -->
+            <div class="album-selector">
+                <button class="album-switch-btn" id="albumSwitchBtn">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <span id="currentAlbumName">Funk Machine Era</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="album-dropdown" id="albumDropdown">
+                    <button class="album-option active" data-album="era">
+                        <i class="fa-solid fa-record-vinyl"></i>
+                        <span>Funk Machine Era</span>
+                    </button>
+                    <button class="album-option" data-album="covers">
+                        <i class="fa-solid fa-record-vinyl"></i>
+                        <span>Covers</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="album-art-container" id="albumArtContainer">
+                <img src="Media/FunkMachineEra_WLogo.png" alt="Funk Machine Era" class="album-art" id="albumArtImg">
+                <h2 class="album-title" id="albumTitle">FUNK MACHINE ERA</h2>
             </div>
             <div class="player-header">
                 <div class="now-playing">

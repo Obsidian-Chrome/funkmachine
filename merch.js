@@ -102,4 +102,76 @@ document.addEventListener('DOMContentLoaded', function() {
             switchBtn.querySelector('i').style.transform = 'rotate(0deg)';
         }, 300);
     });
+
+    // Community Carousel
+    const carouselTrack = document.getElementById('carouselTrack');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    let currentIndex = 0;
+    const totalItems = carouselItems.length;
+
+    function updateCarousel() {
+        // Remove active class from all items and indicators
+        carouselItems.forEach(item => item.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Add active class to current item and indicator
+        carouselItems[currentIndex].classList.add('active');
+        indicators[currentIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+
+    // Event listeners
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => goToSlide(index));
+    });
+
+    // Auto-play carousel (optional)
+    let autoplayInterval = setInterval(nextSlide, 5000);
+
+    // Pause autoplay on hover
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoplayInterval);
+        });
+
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoplayInterval = setInterval(nextSlide, 5000);
+        });
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+        }
+    });
 });
