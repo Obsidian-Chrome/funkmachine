@@ -22,6 +22,18 @@ const albumsDatabase = {
                 youtube: "https://www.youtube.com/watch?v=UdYoM1EB6nE"
             }
         ]
+    },
+    collabs: {
+        name: "Collabs",
+        image: "Media/Collabs_WLogo.png",
+        tracks: [
+            {
+                name: "Lucien X Funk Machine - Spark the Night",
+                src: "Media/Lucien-x-Funk-Machine-Spark-the-Night.mp3",
+                duration: "3:22",
+                youtube: "https://youtu.be/CmaYXSV3yGY?list=PLRTnwvHvAoG9bLJiMHSwQ3sdPNEHy9XAT"
+            }
+        ]
     }
 };
 
@@ -793,7 +805,83 @@ Sore ga zutto damasenai no ga kimi no fire
 (Whoa-oh-oh)
 (Whoa-oh-oh)
 Uso mo shinjitsu mo mune ni sono ai o
-(Whoa)`
+(Whoa)`,
+    "Lucien X Funk Machine - Spark the Night": `[VERSE 1 — LUCIEN]
+
+City’s burning cold tonight,
+Neon cracks like teeth that bite.
+I walk alone with a storm inside,
+Searching for a spark these cowards hide.
+Another fake smile in my way? I spit.
+I tear through shadows — I don’t quit.
+Keep your lies, keep your plastic light —
+I’m the blackout king of this damn night.
+
+[VERSE 2 — BALTOR]
+
+I slide in smooth, the bass just right,
+Groove dripping honey in the flashing lights.
+Every step I take, oh, the colors expand —
+Spotlights follow where I land.
+Your thunder’s loud, but I move with finesse,
+Silk in my voice, rhythm in my chest.
+Come on, big guy, keep up with my flow —
+Together we’ll make this city glow.
+
+[PRE-CHORUS — DUO]
+
+Your fire —
+My groove.
+Two storms
+Breaking loose.
+No brakes,
+No rules —
+Let’s show ’em
+What we do.
+
+[CHORUS — DUO]
+
+We spark the night,
+Light the skyline with our drive.
+Rock hits hard,
+Funk keeps it amplified.
+When your rage meets my groove just right—
+We spark the night,
+Yeah, we spark the night.
+
+[VERSE 3 — LUCIEN]
+
+I rip the silence, harsh and raw,
+Crush the frames they call “the law.”
+Your bass drops deep, it shakes the steel —
+Damn, Baltor, that groove feels real.
+But don’t get cocky — I’m still the quake,
+The punch that makes the pavement break.
+You shine pretty — sure, alright…
+But I’m the fist that starts the fight.
+
+[VERSE 4 — BALTOR]
+
+Oh you’re the fist, yeah — I’ll be the flame,
+The swing, the smile, the funk in your name.
+You crash hard, but I bend and sway,
+Turn every impact into play.
+Two worlds collide, but the beat’s our guide —
+Thunder and velvet side by side.
+Let the rooftops shake, let the noise explode —
+We’re the spark running down the road.
+
+[CHORUS — DUO – FINAL]
+
+We spark the night,
+Let the city come alive.
+Rock hits hard,
+Funk keeps it amplified.
+When your rage meets my groove just right—
+We spark the night,
+Yeah, we spark the night.
+Tonight…
+We own the lights.`
 };
 
 // Player State
@@ -1246,7 +1334,7 @@ function switchAlbum(albumId) {
         currentAlbumName.textContent = album.name;
         
         // Update playlist
-        if (albumId === 'covers') {
+        if (albumId === 'covers' || albumId === 'collabs') {
             // Generate playlist HTML for Covers album
             let playlistHTML = '';
             album.tracks.forEach((track, index) => {
