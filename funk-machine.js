@@ -11,7 +11,7 @@ const albumsDatabase = {
         tracks: [
             {
                 name: "Rollin' In The Groove",
-                src: "Media/Funk Machine - Rollin' In The Groove.mp3",
+                src: "Media/Funk Machine - Rollin' in the Groove.mp3",
                 duration: "3:50",
                 youtube: "https://www.youtube.com/watch?v=sPH-58xyyLw"
             },
@@ -65,7 +65,7 @@ const albumsDatabase = {
             },
             {
                 name: "Chains Of The Past",
-                src: "Media/Funk Machine - Chains Of The Past.mp3",
+                src: "Media/Funk Machine - Chains of the Past.mp3",
                 duration: "4:36",
                 youtube: "https://www.youtube.com/watch?v=prbXsTwxAbQ"
             }
