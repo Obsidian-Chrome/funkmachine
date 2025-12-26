@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emote Creator - Funk Machine</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="funk-machine.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .emote-creator-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(20, 20, 40, 0.9);
+            border-radius: 15px;
+            border: 2px solid var(--neon-primary);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .emote-creator-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .emote-creator-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--neon-primary);
+            text-shadow: 0 0 20px var(--neon-primary);
+            margin-bottom: 10px;
+        }
+
+        .emote-creator-subtitle {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .emote-input-section {
+            margin-bottom: 20px;
+        }
+
+        .emote-textarea {
+            width: 100%;
+            min-height: 300px;
+            padding: 15px;
+            background: rgba(10, 10, 30, 0.8);
+            border: 2px solid var(--neon-secondary);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            resize: vertical;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .emote-textarea:focus {
+            outline: none;
+            border-color: var(--neon-primary);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        .emote-textarea.warning {
+            border-color: #ff9800;
+        }
+
+        .emote-textarea.error {
+            border-color: #f44336;
+        }
+
+        .counter-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .counter-box {
+            flex: 1;
+            padding: 15px;
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid var(--neon-primary);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .counter-label {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        .counter-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--neon-primary);
+        }
+
+        .counter-value.warning {
+            color: #ff9800;
+        }
+
+        .counter-value.error {
+            color: #f44336;
+        }
+
+        .counter-max {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .emote-btn {
+            flex: 1;
+            padding: 12px 24px;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 2px solid var(--neon-primary);
+            border-radius: 8px;
+            background: transparent;
+            color: var(--neon-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .emote-btn:hover {
+            background: var(--neon-primary);
+            color: var(--bg-primary);
+            box-shadow: 0 0 20px var(--neon-primary);
+        }
+
+        .emote-btn.secondary {
+            border-color: var(--neon-secondary);
+            color: var(--neon-secondary);
+        }
+
+        .emote-btn.secondary:hover {
+            background: var(--neon-secondary);
+            color: var(--bg-primary);
+            box-shadow: 0 0 20px var(--neon-secondary);
+        }
+
+        .status-message {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+            display: none;
+        }
+
+        .status-message.success {
+            background: rgba(76, 175, 80, 0.2);
+            border: 1px solid #4caf50;
+            color: #4caf50;
+            display: block;
+        }
+
+        .status-message.error {
+            background: rgba(244, 67, 54, 0.2);
+            border: 1px solid #f44336;
+            color: #f44336;
+            display: block;
+        }
+
+        .info-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 255, 255, 0.05);
+            border-left: 4px solid var(--neon-primary);
+            border-radius: 8px;
+        }
+
+        .info-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: var(--neon-primary);
+            margin-bottom: 10px;
+        }
+
+        .info-list {
+            font-family: 'Rajdhani', sans-serif;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+        }
+
+        .info-list i {
+            color: var(--neon-primary);
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-grid"></div>
+    <div class="neon-lines"></div>
+    
+    <div class="container">
+        <header class="artist-header">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="Media/FunkMachine.png" alt="Funk Machine" class="artist-logo">
+                </a>
+            </div>
+            <p class="artist-tagline">FUNK • GROOVE • LOVE</p>
+        </header>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Musique</a>
+            <a href="concerts.html" class="nav-link">Concerts</a>
+            <a href="merch.html" class="nav-link">Merch</a>
+            <a href="about.html" class="nav-link">À propos</a>
+        </nav>
+
+        <div class="emote-creator-container">
+            <div class="emote-creator-header">
+                <h1 class="emote-creator-title">
+                    EMOTE CREATOR
+                </h1>
+                <p class="emote-creator-subtitle"></p>
+            </div>
+
+            <div class="emote-input-section" style="margin-bottom: 30px;">
+                <h3 style="font-family: 'Rajdhani', sans-serif; color: var(--neon-secondary); margin-bottom: 10px;">
+                    <i class="fa-solid fa-music"></i> Convertir des lyrics
+                </h3>
+                <textarea 
+                    id="lyricsInput" 
+                    class="emote-textarea"
+                    style="min-height: 200px;"
+                    placeholder="Collez vos lyrics ici (Verse 1, Chorus, etc.)..."
+                ></textarea>
+                <button class="emote-btn" id="convertBtn" style="margin-top: 15px; width: 100%;">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Convertir en emotes
+                </button>
+            </div>
+
+            <div class="emote-input-section">
+                <h3 style="font-family: 'Rajdhani', sans-serif; color: var(--neon-primary); margin-bottom: 10px;">
+                    <i class="fa-solid fa-file-lines"></i> Résultat
+                </h3>
+                <textarea 
+                    id="emoteTextarea" 
+                    class="emote-textarea"
+                ></textarea>
+            </div>
+
+            <div class="counter-section">
+                <div class="counter-box">
+                    <div class="counter-label">Caractères (ligne actuelle)</div>
+                    <div class="counter-value" id="charCount">
+                        <span id="currentChars">0</span><span class="counter-max"> / 180</span>
+                    </div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-label">Lignes</div>
+                    <div class="counter-value" id="lineCount">
+                        <span id="currentLines">0</span><span class="counter-max"> / 15</span>
+                    </div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-label">Temps cumulé (wait)</div>
+                    <div class="counter-value" id="waitTime">
+                        <span id="currentWaitTime">00:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="emote-btn" id="copyBtn">
+                    <i class="fa-solid fa-copy"></i> Copier
+                </button>
+                <button class="emote-btn secondary" id="clearBtn">
+                    <i class="fa-solid fa-trash"></i> Effacer
+                </button>
+            </div>
+
+            <div class="status-message" id="statusMessage"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="https://discord.gg/AsA2zuYkBM" target="_blank" rel="noopener noreferrer" class="footer-label-link">
+                <img src="Media/noctura_records.png" alt="Noctura Records" class="footer-label-logo">
+            </a>
+            <p class="footer-text">© Funk Machine • Noctura Records</p>
+        </div>
+    </footer>
+
+    <script src="funk-machine.js"></script>
+    <script>
+        const MAX_CHARS_PER_LINE = 180;
+        const MAX_LINES = 15;
+        const WARNING_THRESHOLD = 0.8;
+
+        const textarea = document.getElementById('emoteTextarea');
+        const currentCharsSpan = document.getElementById('currentChars');
+        const currentLinesSpan = document.getElementById('currentLines');
+        const currentWaitTimeSpan = document.getElementById('currentWaitTime');
+        const charCountValue = document.getElementById('charCount');
+        const lineCountValue = document.getElementById('lineCount');
+        const copyBtn = document.getElementById('copyBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const statusMessage = document.getElementById('statusMessage');
+
+        function getCurrentLine() {
+            const cursorPosition = textarea.selectionStart;
+            const textBeforeCursor = textarea.value.substring(0, cursorPosition);
+            const currentLineIndex = textBeforeCursor.split('\n').length - 1;
+            const lines = textarea.value.split('\n');
+            return { lineIndex: currentLineIndex, line: lines[currentLineIndex] || '' };
+        }
+
+        function calculateWaitTime() {
+            const { lineIndex } = getCurrentLine();
+            const lines = textarea.value.split('\n');
+            let totalSeconds = 0;
+            
+            // Sum up all <wait.XX> tags from line 0 to current line (inclusive)
+            for (let i = 0; i <= lineIndex && i < lines.length; i++) {
+                const line = lines[i];
+                // Match <wait.XX> pattern where XX is a number
+                const waitMatches = line.matchAll(/<wait\.(\d+)>/g);
+                for (const match of waitMatches) {
+                    totalSeconds += parseInt(match[1], 10);
+                }
+            }
+            
+            // Format as MM:SS
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        function updateCounters() {
+            const text = textarea.value;
+            const lines = text.split('\n');
+            const lineCount = lines.length;
+            
+            // Get current line based on cursor position
+            const { lineIndex, line } = getCurrentLine();
+            const currentLineLength = line.length;
+
+            // Update character counter (showing current line)
+            currentCharsSpan.textContent = currentLineLength;
+            
+            // Update line counter
+            currentLinesSpan.textContent = lineCount;
+
+            // Update wait time counter
+            const waitTime = calculateWaitTime();
+            currentWaitTimeSpan.textContent = waitTime;
+
+            // Update styles based on limits (warnings only, no truncation)
+            updateStyles(currentLineLength, lineCount);
+        }
+
+        function updateStyles(currentLineLength, lineCount) {
+            const charPercentage = currentLineLength / MAX_CHARS_PER_LINE;
+            const linePercentage = lineCount / MAX_LINES;
+            const maxPercentage = Math.max(charPercentage, linePercentage);
+
+            // Remove all state classes
+            textarea.classList.remove('warning', 'error');
+            charCountValue.classList.remove('warning', 'error');
+            lineCountValue.classList.remove('warning', 'error');
+
+            // Apply appropriate state
+            if (maxPercentage >= 1) {
+                textarea.classList.add('error');
+                if (charPercentage >= 1) charCountValue.classList.add('error');
+                if (linePercentage >= 1) lineCountValue.classList.add('error');
+            } else if (maxPercentage >= WARNING_THRESHOLD) {
+                textarea.classList.add('warning');
+                if (charPercentage >= WARNING_THRESHOLD) charCountValue.classList.add('warning');
+                if (linePercentage >= WARNING_THRESHOLD) lineCountValue.classList.add('warning');
+            }
+        }
+
+        function showStatus(message, type) {
+            statusMessage.textContent = message;
+            statusMessage.className = `status-message ${type}`;
+            
+            setTimeout(() => {
+                statusMessage.className = 'status-message';
+            }, 3000);
+        }
+
+        // Event listeners
+        textarea.addEventListener('input', updateCounters);
+        textarea.addEventListener('paste', () => {
+            setTimeout(updateCounters, 0);
+        });
+        // Update counter when cursor moves (clicking or using arrow keys)
+        textarea.addEventListener('click', updateCounters);
+        textarea.addEventListener('keyup', updateCounters);
+        textarea.addEventListener('keydown', updateCounters);
+
+        copyBtn.addEventListener('click', async () => {
+            const text = textarea.value;
+            
+            if (!text.trim()) {
+                showStatus('Aucun texte à copier!', 'error');
+                return;
+            }
+
+            try {
+                await navigator.clipboard.writeText(text);
+                showStatus('✓ Emote copié dans le presse-papier!', 'success');
+            } catch (err) {
+                // Fallback for older browsers
+                textarea.select();
+                document.execCommand('copy');
+                showStatus('✓ Emote copié dans le presse-papier!', 'success');
+            }
+        });
+
+        clearBtn.addEventListener('click', () => {
+            if (textarea.value.trim()) {
+                if (confirm('Êtes-vous sûr de vouloir effacer tout le texte?')) {
+                    textarea.value = '';
+                    updateCounters();
+                    showStatus('Texte effacé', 'success');
+                }
+            }
+        });
+
+        // Lyrics converter functionality
+        const lyricsInput = document.getElementById('lyricsInput');
+        const convertBtn = document.getElementById('convertBtn');
+
+        convertBtn.addEventListener('click', () => {
+            const lyrics = lyricsInput.value.trim();
+            
+            if (!lyrics) {
+                showStatus('Aucun texte à convertir!', 'error');
+                return;
+            }
+
+            const converted = convertLyricsToEmotes(lyrics);
+            textarea.value = converted;
+            updateCounters();
+            showStatus('✓ Lyrics converties en emotes!', 'success');
+        });
+
+        function convertLyricsToEmotes(lyrics) {
+            const lines = lyrics.split('\n');
+            const MAX_LINE_LENGTH = 180;
+            const MAX_TOTAL_LINES = 15;
+            const COMMAND_PREFIX = '/y ["';
+            const COMMAND_SUFFIX = '"]';
+
+            // Section headers regex - matches both "Chorus" and "[Chorus]" formats
+            const sectionHeaderRegex = /^\[?(Verse|Chorus|Pre-Chorus|Bridge|Outro|Intro|Final Chorus|Post-Chorus)(\s+\d+)?\]?$/i;
+
+            // Parse lyrics into sections
+            const sections = [];
+            let currentSection = null;
+            let currentGroup = [];
+
+            for (let line of lines) {
+                line = line.trim();
+                
+                if (!line) continue;
+
+                const headerMatch = line.match(sectionHeaderRegex);
+                
+                if (headerMatch) {
+                    // Save previous section
+                    if (currentSection && currentGroup.length > 0) {
+                        currentSection.groups.push([...currentGroup]);
+                        currentGroup = [];
+                    }
+                    if (currentSection) {
+                        sections.push(currentSection);
+                    }
+                    
+                    // Start new section
+                    currentSection = {
+                        type: headerMatch[1],
+                        number: headerMatch[2] ? parseInt(headerMatch[2].trim()) : null,
+                        groups: []
+                    };
+                    continue;
+                }
+
+                // Add line to current group
+                const testGroup = [...currentGroup, line];
+                const testText = testGroup.join(' ');
+                const testLength = COMMAND_PREFIX.length + testText.length + COMMAND_SUFFIX.length;
+
+                if (testLength > MAX_LINE_LENGTH && currentGroup.length > 0) {
+                    // Save current group and start new one
+                    if (currentSection) {
+                        currentSection.groups.push([...currentGroup]);
+                    }
+                    currentGroup = [line];
+                } else {
+                    currentGroup.push(line);
+                }
+            }
+
+            // Save final group and section
+            if (currentSection && currentGroup.length > 0) {
+                currentSection.groups.push([...currentGroup]);
+            }
+            if (currentSection) {
+                sections.push(currentSection);
+            }
+
+            // Generate output and check line count
+            let result = generateOutput(sections);
+            let filteredSections = [...sections];
+            
+            // If over 15 lines, try removing Pre-Chorus sections
+            if (result.lineCount > MAX_TOTAL_LINES) {
+                filteredSections = filteredSections.filter(s => !s.type.match(/Pre-Chorus/i));
+                result = generateOutput(filteredSections);
+            }
+
+            // If still over 15 lines, keep only first Verse
+            if (result.lineCount > MAX_TOTAL_LINES) {
+                const verseFound = {};
+                filteredSections = filteredSections.filter(s => {
+                    if (s.type.match(/Verse/i)) {
+                        if (verseFound['Verse']) {
+                            return false; // Skip duplicate verse
+                        }
+                        verseFound['Verse'] = true;
+                    }
+                    return true;
+                });
+                result = generateOutput(filteredSections);
+            }
+
+            // If still over 15 lines, keep only first Chorus (except Final Chorus)
+            if (result.lineCount > MAX_TOTAL_LINES) {
+                const chorusFound = {};
+                filteredSections = filteredSections.filter(s => {
+                    if (s.type.match(/^Chorus$/i)) {
+                        if (chorusFound['Chorus']) {
+                            return false; // Skip duplicate chorus
+                        }
+                        chorusFound['Chorus'] = true;
+                    }
+                    return true;
+                });
+                result = generateOutput(filteredSections);
+            }
+
+            return result.text;
+        }
+
+        function generateOutput(sections) {
+            const output = [];
+            
+            for (let section of sections) {
+                for (let group of section.groups) {
+                    output.push(formatGroup(group));
+                    output.push('<wait.XX>');
+                }
+            }
+
+            // Remove trailing <wait.XX>
+            if (output.length > 0 && output[output.length - 1] === '<wait.XX>') {
+                output.pop();
+            }
+
+            return {
+                text: output.join('\n'),
+                lineCount: output.length
+            };
+        }
+
+        function formatGroup(lines) {
+            const text = lines.join(' ');
+            return `/y ["${text}"]`;
+        }
+
+        // Initialize counters
+        updateCounters();
+    </script>
+</body>
+</html>
