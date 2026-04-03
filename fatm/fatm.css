@@ -5,15 +5,15 @@
 }
 
 :root {
-    --neon-cyan: #44e0bd;
-    --neon-blue: #3bc9a8;
-    --neon-green: #5ff5d1;
-    --neon-accent: #2ab89a;
-    --dark-bg: #0a0f0d;
-    --darker-bg: #050807;
-    --card-bg: rgba(10, 20, 18, 0.85);
-    --text-primary: #e8f4f1;
-    --text-secondary: #a0c4b8;
+    --neon-cyan: #d946ef;
+    --neon-blue: #a855f7;
+    --neon-green: #f472b6;
+    --neon-accent: #c026d3;
+    --dark-bg: #0f0a0d;
+    --darker-bg: #070507;
+    --card-bg: rgba(20, 10, 18, 0.85);
+    --text-primary: #f4e8f1;
+    --text-secondary: #c4a0b8;
 }
 
 body {
@@ -33,8 +33,8 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(rgba(68, 224, 189, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(68, 224, 189, 0.1) 1px, transparent 1px);
+        linear-gradient(rgba(217, 70, 239, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(217, 70, 239, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
     z-index: 0;
     animation: gridMove 20s linear infinite;
@@ -153,8 +153,8 @@ body {
     padding: 30px;
     margin-bottom: 40px;
     box-shadow: 
-        0 0 20px rgba(68, 224, 189, 0.3),
-        inset 0 0 20px rgba(68, 224, 189, 0.1);
+        0 0 20px rgba(217, 70, 239, 0.3),
+        inset 0 0 20px rgba(217, 70, 239, 0.1);
     backdrop-filter: blur(10px);
 }
 
@@ -171,7 +171,7 @@ body {
     align-items: center;
     gap: 15px;
     padding: 15px 30px;
-    background: rgba(68, 224, 189, 0.1);
+    background: rgba(217, 70, 239, 0.1);
     border: 2px solid var(--neon-cyan);
     border-radius: 50px;
     color: var(--neon-cyan);
@@ -182,12 +182,12 @@ body {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    box-shadow: 0 0 20px rgba(68, 224, 189, 0.3);
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.3);
 }
 
 .album-switch-btn:hover {
-    background: rgba(68, 224, 189, 0.2);
-    box-shadow: 0 0 30px rgba(68, 224, 189, 0.5);
+    background: rgba(217, 70, 239, 0.2);
+    box-shadow: 0 0 30px rgba(217, 70, 239, 0.5);
     transform: translateY(-2px);
 }
 
@@ -226,8 +226,8 @@ body {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 100;
     box-shadow: 
-        0 0 30px rgba(68, 224, 189, 0.4),
-        inset 0 0 20px rgba(68, 224, 189, 0.1);
+        0 0 30px rgba(217, 70, 239, 0.4),
+        inset 0 0 20px rgba(217, 70, 239, 0.1);
 }
 
 .album-dropdown.show {
@@ -255,16 +255,16 @@ body {
 }
 
 .album-option:hover {
-    background: rgba(68, 224, 189, 0.1);
-    border-color: rgba(68, 224, 189, 0.3);
+    background: rgba(217, 70, 239, 0.1);
+    border-color: rgba(217, 70, 239, 0.3);
     color: var(--neon-cyan);
 }
 
 .album-option.active {
-    background: rgba(68, 224, 189, 0.15);
+    background: rgba(217, 70, 239, 0.15);
     border-color: var(--neon-cyan);
     color: var(--neon-cyan);
-    box-shadow: 0 0 15px rgba(68, 224, 189, 0.3);
+    box-shadow: 0 0 15px rgba(217, 70, 239, 0.3);
 }
 
 .album-option i {
@@ -305,9 +305,9 @@ body {
     border-radius: 15px;
     border: 3px solid var(--neon-cyan);
     box-shadow: 
-        0 0 30px rgba(68, 224, 189, 0.5),
-        0 0 60px rgba(68, 224, 189, 0.3),
-        inset 0 0 20px rgba(68, 224, 189, 0.1);
+        0 0 30px rgba(217, 70, 239, 0.5),
+        0 0 60px rgba(217, 70, 239, 0.3),
+        inset 0 0 20px rgba(217, 70, 239, 0.1);
     transition: all 0.3s ease;
     margin-bottom: 20px;
 }
@@ -315,9 +315,9 @@ body {
 .album-art:hover {
     transform: scale(1.02);
     box-shadow: 
-        0 0 40px rgba(68, 224, 189, 0.7),
-        0 0 80px rgba(68, 224, 189, 0.4),
-        inset 0 0 30px rgba(68, 224, 189, 0.2);
+        0 0 40px rgba(217, 70, 239, 0.7),
+        0 0 80px rgba(217, 70, 239, 0.4),
+        inset 0 0 30px rgba(217, 70, 239, 0.2);
 }
 
 .album-title {
@@ -394,7 +394,7 @@ body {
 .progress-bar {
     width: 100%;
     height: 8px;
-    background: rgba(68, 224, 189, 0.2);
+    background: rgba(217, 70, 239, 0.2);
     border-radius: 10px;
     position: relative;
     cursor: pointer;
@@ -410,7 +410,7 @@ body {
     height: 100%;
     background: linear-gradient(90deg, 
         transparent, 
-        rgba(68, 224, 189, 0.3), 
+        rgba(217, 70, 239, 0.3), 
         transparent);
     animation: shimmer 2s infinite;
 }
@@ -584,7 +584,7 @@ body {
     position: relative;
     width: 150px;
     height: 6px;
-    background: rgba(68, 224, 189, 0.2);
+    background: rgba(217, 70, 239, 0.2);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -611,12 +611,12 @@ body {
 /* Playlist */
 .playlist-container {
     background: var(--card-bg);
-    border: 2px solid var(--neon-green);
+    border: 2px solid var(--neon-cyan);
     border-radius: 20px;
     padding: 30px;
     box-shadow: 
-        0 0 20px rgba(95, 245, 209, 0.3),
-        inset 0 0 20px rgba(95, 245, 209, 0.1);
+        0 0 20px rgba(217, 70, 239, 0.3),
+        inset 0 0 20px rgba(217, 70, 239, 0.1);
     backdrop-filter: blur(10px);
 }
 
@@ -628,11 +628,11 @@ body {
 }
 
 .neon-text {
-    color: var(--neon-green);
+    color: var(--neon-cyan);
     text-shadow: 
-        0 0 10px var(--neon-green),
-        0 0 20px var(--neon-green),
-        0 0 40px var(--neon-green);
+        0 0 10px var(--neon-cyan),
+        0 0 20px var(--neon-cyan),
+        0 0 40px var(--neon-cyan);
 }
 
 .playlist {
@@ -646,8 +646,8 @@ body {
     align-items: center;
     gap: 20px;
     padding: 15px 20px;
-    background: rgba(68, 224, 189, 0.05);
-    border: 1px solid rgba(68, 224, 189, 0.3);
+    background: rgba(217, 70, 239, 0.05);
+    border: 1px solid rgba(217, 70, 239, 0.3);
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -673,16 +673,16 @@ body {
 }
 
 .track-item:hover {
-    background: rgba(68, 224, 189, 0.1);
+    background: rgba(217, 70, 239, 0.1);
     border-color: var(--neon-cyan);
-    box-shadow: 0 0 15px rgba(68, 224, 189, 0.3);
+    box-shadow: 0 0 15px rgba(217, 70, 239, 0.3);
     transform: translateX(5px);
 }
 
 .track-item.active {
-    background: rgba(68, 224, 189, 0.15);
+    background: rgba(217, 70, 239, 0.15);
     border-color: var(--neon-green);
-    box-shadow: 0 0 20px rgba(95, 245, 209, 0.4);
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4);
 }
 
 .track-number {
@@ -779,7 +779,7 @@ body {
 .track-download-btn:hover {
     background: var(--neon-cyan);
     color: var(--dark-bg);
-    box-shadow: 0 0 15px rgba(68, 224, 189, 0.5);
+    box-shadow: 0 0 15px rgba(217, 70, 239, 0.5);
     transform: scale(1.1);
 }
 
@@ -844,8 +844,8 @@ body {
     margin-top: 40px;
     margin-bottom: 40px;
     box-shadow: 
-        0 0 20px rgba(42, 184, 154, 0.3),
-        inset 0 0 20px rgba(42, 184, 154, 0.1);
+        0 0 20px rgba(192, 38, 211, 0.3),
+        inset 0 0 20px rgba(192, 38, 211, 0.1);
     backdrop-filter: blur(10px);
 }
 
@@ -911,7 +911,7 @@ body {
     padding: 20px;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    border: 1px solid rgba(68, 224, 189, 0.2);
+    border: 1px solid rgba(217, 70, 239, 0.2);
     transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
@@ -927,7 +927,7 @@ body {
 }
 
 .lyrics-content::-webkit-scrollbar-track {
-    background: rgba(68, 224, 189, 0.1);
+    background: rgba(217, 70, 239, 0.1);
     border-radius: 10px;
 }
 
@@ -1038,7 +1038,7 @@ body {
 .nav-link:hover {
     color: var(--neon-cyan);
     border-color: var(--neon-cyan);
-    box-shadow: 0 0 15px rgba(68, 224, 189, 0.3);
+    box-shadow: 0 0 15px rgba(217, 70, 239, 0.3);
     transform: translateY(-2px);
 }
 
@@ -1046,29 +1046,29 @@ body {
     color: var(--dark-bg);
     background: var(--neon-cyan);
     border-color: var(--neon-cyan);
-    box-shadow: 0 0 20px rgba(68, 224, 189, 0.5);
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.5);
 }
 
 .nav-link.artist-switch {
-    color: #d946ef;
+    color: #44e0bd;
 }
 
 .nav-link.artist-switch:hover {
-    color: #d946ef;
-    border-color: #d946ef;
-    box-shadow: 0 0 15px rgba(217, 70, 239, 0.3);
+    color: #44e0bd;
+    border-color: #44e0bd;
+    box-shadow: 0 0 15px rgba(68, 224, 189, 0.3);
     transform: translateY(-2px);
 }
 
 /* Concerts Container */
 .concerts-container {
     background: var(--card-bg);
-    border: 2px solid var(--neon-green);
+    border: 2px solid var(--neon-cyan);
     border-radius: 20px;
     padding: 40px;
     box-shadow: 
-        0 0 20px rgba(95, 245, 209, 0.3),
-        inset 0 0 20px rgba(95, 245, 209, 0.1);
+        0 0 20px rgba(217, 70, 239, 0.3),
+        inset 0 0 20px rgba(217, 70, 239, 0.1);
     backdrop-filter: blur(10px);
 }
 
@@ -1090,16 +1090,16 @@ body {
     align-items: center;
     gap: 30px;
     padding: 25px;
-    background: rgba(68, 224, 189, 0.05);
-    border: 2px solid rgba(68, 224, 189, 0.3);
+    background: rgba(217, 70, 239, 0.05);
+    border: 2px solid rgba(217, 70, 239, 0.3);
     border-radius: 15px;
     transition: all 0.3s ease;
 }
 
 .concert-item:hover {
-    background: rgba(68, 224, 189, 0.1);
+    background: rgba(217, 70, 239, 0.1);
     border-color: var(--neon-cyan);
-    box-shadow: 0 0 20px rgba(68, 224, 189, 0.3);
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.3);
     transform: translateX(10px);
 }
 
@@ -1113,7 +1113,7 @@ body {
     background: var(--neon-cyan);
     border-radius: 10px;
     color: var(--dark-bg);
-    box-shadow: 0 0 15px rgba(68, 224, 189, 0.5);
+    box-shadow: 0 0 15px rgba(217, 70, 239, 0.5);
 }
 
 .date-day {
@@ -1196,7 +1196,7 @@ body {
 .concert-btn:hover {
     background: var(--neon-cyan);
     color: var(--dark-bg);
-    box-shadow: 0 0 20px rgba(68, 224, 189, 0.5);
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.5);
     transform: scale(1.05);
 }
 
@@ -1270,8 +1270,8 @@ body {
     border-radius: 20px;
     padding: 40px;
     box-shadow: 
-        0 0 20px rgba(42, 184, 154, 0.3),
-        inset 0 0 20px rgba(42, 184, 154, 0.1);
+        0 0 20px rgba(192, 38, 211, 0.3),
+        inset 0 0 20px rgba(192, 38, 211, 0.1);
     backdrop-filter: blur(10px);
 }
 
@@ -1288,8 +1288,8 @@ body {
 }
 
 .merch-item {
-    background: rgba(68, 224, 189, 0.05);
-    border: 2px solid rgba(68, 224, 189, 0.3);
+    background: rgba(217, 70, 239, 0.05);
+    border: 2px solid rgba(217, 70, 239, 0.3);
     border-radius: 15px;
     padding: 20px;
     transition: all 0.3s ease;
@@ -1300,9 +1300,9 @@ body {
 }
 
 .merch-item:hover {
-    background: rgba(68, 224, 189, 0.1);
+    background: rgba(217, 70, 239, 0.1);
     border-color: var(--neon-cyan);
-    box-shadow: 0 0 20px rgba(68, 224, 189, 0.3);
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.3);
     transform: translateY(-5px);
 }
 
@@ -1348,11 +1348,11 @@ body {
 .merch-placeholder {
     width: 100%;
     height: 100%;
-    background: rgba(68, 224, 189, 0.1);
+    background: rgba(217, 70, 239, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(68, 224, 189, 0.3);
+    border: 2px solid rgba(217, 70, 239, 0.3);
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -1399,7 +1399,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    border: 2px solid rgba(68, 224, 189, 0.3);
+    border: 2px solid rgba(217, 70, 239, 0.3);
 }
 
 .merch-preview-img {
@@ -1408,13 +1408,13 @@ body {
     object-fit: contain;
     border-radius: 10px;
     background: rgba(10, 15, 13, 0.95);
-    border: 2px solid rgba(68, 224, 189, 0.3);
+    border: 2px solid rgba(217, 70, 239, 0.3);
     transition: all 0.3s ease;
 }
 
 .merch-item:hover .merch-preview-img {
     border-color: var(--neon-cyan);
-    box-shadow: 0 0 20px rgba(68, 224, 189, 0.4);
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.4);
 }
 
 .merch-details {
@@ -1453,7 +1453,7 @@ body {
 .version-switch-btn-overlay:hover {
     background: var(--neon-green);
     color: var(--dark-bg);
-    box-shadow: 0 0 15px rgba(42, 184, 154, 0.5);
+    box-shadow: 0 0 15px rgba(192, 38, 211, 0.5);
     transform: scale(1.1);
 }
 
@@ -1476,8 +1476,8 @@ body {
 .merch-compatibility {
     margin: 15px 0;
     padding: 15px;
-    background: rgba(68, 224, 189, 0.05);
-    border: 1px solid rgba(68, 224, 189, 0.2);
+    background: rgba(217, 70, 239, 0.05);
+    border: 1px solid rgba(217, 70, 239, 0.2);
     border-radius: 8px;
 }
 
@@ -1502,10 +1502,10 @@ body {
 .compatibility-list li {
     font-size: 0.85rem;
     color: var(--text-primary);
-    background: rgba(68, 224, 189, 0.1);
+    background: rgba(217, 70, 239, 0.1);
     padding: 4px 10px;
     border-radius: 5px;
-    border: 1px solid rgba(68, 224, 189, 0.3);
+    border: 1px solid rgba(217, 70, 239, 0.3);
 }
 
 .merch-info {
@@ -1521,8 +1521,8 @@ body {
     font-size: 0.85rem;
     color: var(--text-secondary);
     padding: 4px 10px;
-    background: rgba(68, 224, 189, 0.1);
-    border: 1px solid rgba(68, 224, 189, 0.3);
+    background: rgba(217, 70, 239, 0.1);
+    border: 1px solid rgba(217, 70, 239, 0.3);
     border-radius: 5px;
 }
 
@@ -1558,7 +1558,7 @@ body {
 .merch-download-btn:hover {
     background: var(--neon-cyan);
     color: var(--dark-bg);
-    box-shadow: 0 0 20px rgba(68, 224, 189, 0.5);
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.5);
     transform: scale(1.02);
 }
 
@@ -1566,7 +1566,7 @@ body {
 .community-gallery-section {
     margin-top: 60px;
     padding-top: 40px;
-    border-top: 2px solid rgba(68, 224, 189, 0.3);
+    border-top: 2px solid rgba(217, 70, 239, 0.3);
     position: relative;
 }
 
@@ -1607,9 +1607,9 @@ body {
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, 
-        rgba(68, 224, 189, 0.3) 0%, 
-        rgba(42, 184, 154, 0.1) 50%,
-        rgba(68, 224, 189, 0.3) 100%);
+        rgba(217, 70, 239, 0.3) 0%, 
+        rgba(192, 38, 211, 0.1) 50%,
+        rgba(217, 70, 239, 0.3) 100%);
     z-index: 1;
     pointer-events: none;
     animation: borderPulse 3s ease-in-out infinite;
@@ -1758,7 +1758,7 @@ body {
     text-shadow: 
         0 0 10px var(--neon-cyan),
         0 0 20px var(--neon-cyan),
-        0 0 30px rgba(68, 224, 189, 0.5);
+        0 0 30px rgba(217, 70, 239, 0.5);
     margin: 0;
     position: relative;
 }
@@ -1798,8 +1798,8 @@ body {
     z-index: 10;
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
     box-shadow: 
-        0 0 20px rgba(68, 224, 189, 0.3),
-        inset 0 0 20px rgba(68, 224, 189, 0.1);
+        0 0 20px rgba(217, 70, 239, 0.3),
+        inset 0 0 20px rgba(217, 70, 239, 0.1);
 }
 
 .carousel-btn-prev {
@@ -1829,8 +1829,8 @@ body {
     color: var(--dark-bg);
     transform: translateY(-50%) scale(1.15);
     box-shadow: 
-        0 0 40px rgba(68, 224, 189, 0.8),
-        inset 0 0 30px rgba(68, 224, 189, 0.3);
+        0 0 40px rgba(217, 70, 239, 0.8),
+        inset 0 0 30px rgba(217, 70, 239, 0.3);
 }
 
 .carousel-btn:active {
@@ -1854,8 +1854,8 @@ body {
     height: 1px;
     background: linear-gradient(90deg,
         transparent 0%,
-        rgba(68, 224, 189, 0.3) 20%,
-        rgba(68, 224, 189, 0.3) 80%,
+        rgba(217, 70, 239, 0.3) 20%,
+        rgba(217, 70, 239, 0.3) 80%,
         transparent 100%);
     transform: translateY(-50%);
 }
@@ -1863,7 +1863,7 @@ body {
 .indicator {
     width: 40px;
     height: 4px;
-    background: rgba(68, 224, 189, 0.2);
+    background: rgba(217, 70, 239, 0.2);
     border: none;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -1903,7 +1903,7 @@ body {
         box-shadow: 
             0 0 25px var(--neon-cyan),
             0 0 50px var(--neon-cyan),
-            0 0 75px rgba(68, 224, 189, 0.5);
+            0 0 75px rgba(217, 70, 239, 0.5);
     }
 }
 
@@ -1914,18 +1914,20 @@ body {
     border-radius: 20px;
     padding: 40px;
     box-shadow: 
-        0 0 20px rgba(68, 224, 189, 0.3),
-        inset 0 0 20px rgba(68, 224, 189, 0.1);
+        0 0 20px rgba(217, 70, 239, 0.3),
+        inset 0 0 20px rgba(217, 70, 239, 0.1);
     backdrop-filter: blur(10px);
 }
 
 .about-header {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 40px;
     margin-bottom: 50px;
     padding-bottom: 30px;
-    border-bottom: 2px solid rgba(68, 224, 189, 0.3);
+    border-bottom: 2px solid rgba(217, 70, 239, 0.3);
+    text-align: center;
 }
 
 .about-image {
@@ -1938,8 +1940,8 @@ body {
     border-radius: 15px;
     border: 3px solid var(--neon-cyan);
     box-shadow: 
-        0 0 30px rgba(68, 224, 189, 0.5),
-        0 0 60px rgba(68, 224, 189, 0.3);
+        0 0 30px rgba(217, 70, 239, 0.5),
+        0 0 60px rgba(217, 70, 239, 0.3);
     object-fit: cover;
 }
 
@@ -1968,8 +1970,8 @@ body {
 
 .bio-section {
     padding: 30px;
-    background: rgba(68, 224, 189, 0.03);
-    border: 1px solid rgba(68, 224, 189, 0.2);
+    background: rgba(217, 70, 239, 0.03);
+    border: 1px solid rgba(217, 70, 239, 0.2);
     border-radius: 15px;
 }
 
@@ -2012,15 +2014,15 @@ body {
 
 .album-info {
     padding: 20px;
-    background: rgba(68, 224, 189, 0.05);
-    border: 1px solid rgba(68, 224, 189, 0.3);
+    background: rgba(217, 70, 239, 0.05);
+    border: 1px solid rgba(217, 70, 239, 0.3);
     border-radius: 10px;
 }
 
 .album-name {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.5rem;
-    color: var(--neon-green);
+    color: var(--neon-cyan);
     margin: 0 0 5px 0;
 }
 
@@ -2039,7 +2041,7 @@ body {
 .tracklist li {
     padding: 8px 15px;
     margin: 5px 0;
-    background: rgba(68, 224, 189, 0.1);
+    background: rgba(217, 70, 239, 0.1);
     border-left: 3px solid var(--neon-cyan);
     border-radius: 5px;
     color: var(--text-primary);
@@ -2047,7 +2049,7 @@ body {
 }
 
 .tracklist li:hover {
-    background: rgba(68, 224, 189, 0.2);
+    background: rgba(217, 70, 239, 0.2);
     transform: translateX(5px);
 }
 
@@ -2077,7 +2079,7 @@ body {
 .social-link:hover {
     background: var(--neon-cyan);
     color: var(--dark-bg);
-    box-shadow: 0 0 20px rgba(68, 224, 189, 0.5);
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.5);
     transform: translateY(-2px);
 }
 
@@ -2112,8 +2114,8 @@ body {
     border: 3px solid var(--neon-cyan);
     border-radius: 10px;
     box-shadow: 
-        0 0 40px rgba(68, 224, 189, 0.6),
-        0 0 80px rgba(68, 224, 189, 0.4);
+        0 0 40px rgba(217, 70, 239, 0.6),
+        0 0 80px rgba(217, 70, 239, 0.4);
     animation: zoomIn 0.3s ease;
 }
 
@@ -2157,7 +2159,7 @@ body {
     margin-top: 80px;
     padding: 40px 20px;
     background: rgba(10, 15, 13, 0.8);
-    border-top: 2px solid rgba(68, 224, 189, 0.3);
+    border-top: 2px solid rgba(217, 70, 239, 0.3);
     backdrop-filter: blur(10px);
 }
 
@@ -2185,15 +2187,15 @@ body {
     height: auto;
     opacity: 0.7;
     filter: brightness(0) saturate(100%) invert(78%) sepia(28%) saturate(1084%) hue-rotate(118deg) brightness(95%) contrast(92%)
-            drop-shadow(0 0 5px rgba(68, 224, 189, 0.3));
+            drop-shadow(0 0 5px rgba(217, 70, 239, 0.3));
     transition: all 0.3s ease;
 }
 
 .footer-label-link:hover .footer-label-logo {
     opacity: 1;
     filter: brightness(0) saturate(100%) invert(78%) sepia(28%) saturate(1084%) hue-rotate(118deg) brightness(95%) contrast(92%)
-            drop-shadow(0 0 15px rgba(68, 224, 189, 0.6))
-            drop-shadow(0 0 25px rgba(68, 224, 189, 0.4));
+            drop-shadow(0 0 15px rgba(217, 70, 239, 0.6))
+            drop-shadow(0 0 25px rgba(217, 70, 239, 0.4));
     transform: scale(1.05);
 }
 

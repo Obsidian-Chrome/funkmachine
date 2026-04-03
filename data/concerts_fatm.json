@@ -1,0 +1,30 @@
+[
+  {
+    "date": "2026-01-22",
+    "venue": "Le Perchoir",
+    "location": "Empyrée 23 - 11 | Ragnarok",
+    "time": "Horaires : 21h00 - 00h00 | Concert : 21h00",
+    "discord": "https://discord.gg/znxm6HhpMa"
+  },
+  {
+    "date": "2026-03-06",
+    "venue": "Aux Poils Fumants",
+    "location": "Brumée 28 - 14 | Ragnarok",
+    "time": "Horaires : 22h30 - 02h30 | Concert : 00h15",
+    "discord": "https://discord.gg/uvtdjFwbbW"
+  },
+  {
+    "date": "2026-04-02",
+    "venue": "Le Perchoir",
+    "location": "Empyrée 23 - 11 | Ragnarok",
+    "time": "Horaires : 21h00 - 00h00 | Concert : 21h00",
+    "discord": "https://discord.gg/znxm6HhpMa"
+  },
+  {
+    "date": "2026-05-25",
+    "venue": "L'Antre du Sorcier",
+    "location": "La Coupe 3 - 12 | Moogle",
+    "time": "Horaires : 21h00 - 23h00 | Concert : 21h00",
+    "discord": "https://discord.gg/kEM2T2DZzw"
+  }
+]

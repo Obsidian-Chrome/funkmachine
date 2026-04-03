@@ -1,0 +1,74 @@
+{
+  "debut": {
+    "name": "Wheel of Fates",
+    "image": "Media/fatm_site/album_cover.png",
+    "tracks": [
+      {
+        "name": "The Fool",
+        "src": "Media/fatm_music/wheel_of_fates/Funk and the Machines - The Fool.mp3",
+        "duration": "3:30",
+        "youtube": ""
+      },
+      {
+        "name": "The Magician",
+        "src": "Media/fatm_music/wheel_of_fates/Funk and the Machines - The Magician.mp3",
+        "duration": "3:45",
+        "youtube": ""
+      },
+      {
+        "name": "The Lovers",
+        "src": "Media/fatm_music/wheel_of_fates/Funk and the Machines - The Lovers.mp3",
+        "duration": "4:10",
+        "youtube": ""
+      },
+      {
+        "name": "Wheel of Fortune",
+        "src": "Media/fatm_music/wheel_of_fates/Funk and the Machines - Wheel of Fortune.mp3",
+        "duration": "3:55",
+        "youtube": ""
+      },
+      {
+        "name": "Strength",
+        "src": "Media/fatm_music/wheel_of_fates/Funk and the Machines - Strength.mp3",
+        "duration": "4:20",
+        "youtube": ""
+      },
+      {
+        "name": "The Hanged Man",
+        "src": "Media/fatm_music/wheel_of_fates/Funk and the Machines - The Hanged Man.mp3",
+        "duration": "3:40",
+        "youtube": ""
+      },
+      {
+        "name": "Death",
+        "src": "Media/fatm_music/wheel_of_fates/Funk and the Machines - Death.mp3",
+        "duration": "4:00",
+        "youtube": ""
+      },
+      {
+        "name": "The Devil",
+        "src": "Media/fatm_music/wheel_of_fates/Funk and the Machines - The Devil.mp3",
+        "duration": "3:50",
+        "youtube": ""
+      },
+      {
+        "name": "The Tower",
+        "src": "Media/fatm_music/wheel_of_fates/Funk and the Machines - The Tower.mp3",
+        "duration": "4:15",
+        "youtube": ""
+      },
+      {
+        "name": "The Sun",
+        "src": "Media/fatm_music/wheel_of_fates/Funk and the Machines - The Sun.mp3",
+        "duration": "3:35",
+        "youtube": ""
+      },
+      {
+        "name": "The World",
+        "src": "Media/fatm_music/wheel_of_fates/Funk and the Machines - The World.mp3",
+        "duration": "4:25",
+        "youtube": ""
+      }
+    ]
+  }
+}

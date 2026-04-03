@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funk and the Machines</title>
+    <link rel="icon" type="image/png" href="../Media/fatm_site/favicon.png">
+    <link rel="stylesheet" href="fatm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="background-grid"></div>
+    <div class="neon-lines"></div>
+    
+    <div class="container">
+        <header class="artist-header">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../Media/fatm_site/FaTM.png" alt="Funk and the Machines" class="artist-logo">
+                </a>
+            </div>
+            <p class="artist-tagline">FUNK • GROOVE • LOVE</p>
+        </header>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link active">Musique</a>
+            <a href="concerts.html" class="nav-link">Concerts</a>
+            <a href="merch.html" class="nav-link">Merch</a>
+            <a href="about.html" class="nav-link">À propos</a>
+            <a href="../index.html" class="nav-link artist-switch">Funk Machine</a>
+        </nav>
+
+        <div class="player-container">
+            <div class="album-selector">
+                <button class="album-switch-btn" id="albumSwitchBtn">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <span id="currentAlbumName">Sélectionnez un album</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="album-dropdown" id="albumDropdown">
+                </div>
+            </div>
+
+            <div class="album-art-container" id="albumArtContainer">
+                <img src="../Media/fatm_site/default_album.png" alt="Album Art" class="album-art" id="albumArtImg">
+                <h2 class="album-title" id="albumTitle">FUNK AND THE MACHINES</h2>
+            </div>
+            
+            <div class="player-header">
+                <div class="now-playing">
+                    <span class="pulse-dot"></span>
+                    <span id="currentTrackName">Sélectionnez une piste</span>
+                </div>
+                <div class="track-info">
+                    <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-handle" id="progressHandle"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" id="shuffleBtn" title="Aléatoire">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/>
+                    </svg>
+                </button>
+                
+                <button class="control-btn" id="prevBtn" title="Précédent">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                    </svg>
+                </button>
+                
+                <button class="control-btn play-btn" id="playBtn" title="Lecture">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg class="pause-icon hidden" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 4h4v16H6zM14 4h4v16h-4z"/>
+                    </svg>
+                </button>
+                
+                <button class="control-btn" id="nextBtn" title="Suivant">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 18h2V6h-2zm-11-7l8.5-6v12z"/>
+                    </svg>
+                </button>
+                
+                <button class="control-btn" id="repeatBtn" title="Répéter">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 1l4 4-4 4"/>
+                        <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                        <path d="M7 23l-4-4 4-4"/>
+                        <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                    </svg>
+                    <span class="repeat-one hidden">1</span>
+                </button>
+            </div>
+
+            <div class="volume-control">
+                <button class="volume-btn" id="volumeBtn">
+                    <svg class="volume-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                    </svg>
+                    <svg class="mute-icon hidden" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                    </svg>
+                </button>
+                <div class="volume-slider">
+                    <input type="range" id="volumeSlider" min="0" max="100" value="70">
+                    <div class="volume-fill" id="volumeFill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="playlist-container">
+            <h2 class="playlist-title">
+                <span class="neon-text">PLAYLIST</span>
+            </h2>
+            <div class="playlist" id="playlist">
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <img src="../Media/paradox_logo.webp" alt="Paradox" class="footer-logo">
+            <p class="footer-text">© Funk and the Machines</p>
+        </div>
+    </footer>
+
+    <audio id="audioPlayer"></audio>
+    <script src="fatm.js"></script>
+</body>
+</html>
