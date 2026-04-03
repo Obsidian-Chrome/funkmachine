@@ -1,0 +1,242 @@
+{
+  "era": {
+    "name": "Funk Machine Era",
+    "image": "Media/FunkMachineEra_WLogo.png",
+    "tracks": [
+      {
+        "name": "Let's Funk Tonight",
+        "src": "Media/fm_music/funk_machine_era/Funk Machine - Let's Funk Tonight.mp3",
+        "duration": "3:14",
+        "youtube": "https://www.youtube.com/watch?v=QqpCS5LnoqI"
+      },
+      {
+        "name": "Where's His Left Arm",
+        "src": "Media/fm_music/funk_machine_era/Funk Machine - Where's His Left Arm.mp3",
+        "duration": "4:08",
+        "youtube": "https://www.youtube.com/watch?v=m6JEG5Y7gK0"
+      },
+      {
+        "name": "Gold Saucer",
+        "src": "Media/fm_music/funk_machine_era/Funk Machine - Gold Saucer.mp3",
+        "duration": "3:38",
+        "youtube": "https://www.youtube.com/watch?v=1lFzmsqs0C8"
+      },
+      {
+        "name": "Garlond Groove",
+        "src": "Media/fm_music/funk_machine_era/Funk Machine - Garlond Groove.mp3",
+        "duration": "3:19",
+        "youtube": "https://www.youtube.com/watch?v=0nvOHoO6Q2g"
+      },
+      {
+        "name": "Mist 9",
+        "src": "Media/fm_music/funk_machine_era/Funk Machine - Mist 9.mp3",
+        "duration": "3:59",
+        "youtube": "https://www.youtube.com/watch?v=xrHEyGl-ZVw"
+      },
+      {
+        "name": "The Groove Protocol",
+        "src": "Media/fm_music/funk_machine_era/Funk Machine - The Groove Protocol.mp3",
+        "duration": "3:57",
+        "youtube": "https://www.youtube.com/watch?v=rnmT6Zy10C8"
+      },
+      {
+        "name": "I'm the Fun in Funk",
+        "src": "Media/fm_music/funk_machine_era/Funk Machine - I'm the Fun in Funk.mp3",
+        "duration": "3:39",
+        "youtube": "https://www.youtube.com/watch?v=x4b_1jHDyTM"
+      },
+      {
+        "name": "The Surgeon",
+        "src": "Media/fm_music/funk_machine_era/Funk Machine - The Surgeon.mp3",
+        "duration": "3:36",
+        "youtube": "https://www.youtube.com/watch?v=XGOL_yL4ID8"
+      },
+      {
+        "name": "Alys In Blue",
+        "src": "Media/fm_music/funk_machine_era/Funk Machine - Alys In Blue.mp3",
+        "duration": "3:49",
+        "youtube": "https://www.youtube.com/watch?v=dD-PuxcPI3U"
+      },
+      {
+        "name": "Neon Sunrise",
+        "src": "Media/fm_music/funk_machine_era/Funk Machine - Neon Sunrise.mp3",
+        "duration": "4:12",
+        "youtube": "https://www.youtube.com/watch?v=jm3F_DhrCDw"
+      }
+    ]
+  },
+  "covers": {
+    "name": "Iridescent Rain",
+    "image": "Media/IridescentRain_WLogo.png",
+    "tracks": [
+      {
+        "name": "Rollin' In The Groove",
+        "src": "Media/fm_music/iridescent_rain/Funk Machine - Rollin' in the Groove.mp3",
+        "duration": "3:50",
+        "youtube": "https://www.youtube.com/watch?v=sPH-58xyyLw"
+      },
+      {
+        "name": "Laser Roller Love",
+        "src": "Media/fm_music/iridescent_rain/Funk Machine - Laser Roller Love.mp3",
+        "duration": "3:25",
+        "youtube": "https://www.youtube.com/watch?v=EnlQZh7lpX4"
+      },
+      {
+        "name": "Let's Boogie",
+        "src": "Media/fm_music/iridescent_rain/Funk Machine - Let's Boogie [Cover].mp3",
+        "duration": "3:14",
+        "youtube": "https://www.youtube.com/watch?v=W60A0Tx1VTc"
+      },
+      {
+        "name": "I Want It",
+        "src": "Media/fm_music/iridescent_rain/Funk Machine - I Want It.mp3",
+        "duration": "3:09",
+        "youtube": "https://www.youtube.com/watch?v=IJoP4A2fCmg"
+      },
+      {
+        "name": "The Funk Messiah",
+        "src": "Media/fm_music/iridescent_rain/Funk Machine - The Funk Messiah.mp3",
+        "duration": "4:40",
+        "youtube": "https://www.youtube.com/watch?v=BpplPU4JSzI"
+      },
+      {
+        "name": "Chrome Paradise",
+        "src": "Media/fm_music/iridescent_rain/Funk Machine - Chrome Paradise.mp3",
+        "duration": "3:36",
+        "youtube": "https://www.youtube.com/watch?v=f6vDXehSa78"
+      },
+      {
+        "name": "Concept Of Love",
+        "src": "Media/fm_music/iridescent_rain/Funk Machine - Concept of Love [Cover].mp3",
+        "duration": "3:57",
+        "youtube": "https://www.youtube.com/watch?v=sf9DWiwrpr0"
+      },
+      {
+        "name": "Dancing Green",
+        "src": "Media/fm_music/iridescent_rain/Funk Machine - Dancing Green.mp3",
+        "duration": "3:19",
+        "youtube": "https://www.youtube.com/watch?v=y_8KBWoIEyM"
+      },
+      {
+        "name": "Dolls",
+        "src": "Media/fm_music/iridescent_rain/Funk Machine - Dolls.mp3",
+        "duration": "4:16",
+        "youtube": "https://www.youtube.com/watch?v=lDntnmHp79Y"
+      },
+      {
+        "name": "Chains Of The Past",
+        "src": "Media/fm_music/iridescent_rain/Funk Machine - Chains of the Past.mp3",
+        "duration": "4:36",
+        "youtube": "https://www.youtube.com/watch?v=prbXsTwxAbQ"
+      }
+    ]
+  },
+  "ivory_tower": {
+    "name": "Ivory Tower",
+    "image": "Media/IvoryTower_WLogo.png",
+    "tracks": [
+      {
+        "name": "Funk Me In The Bass",
+        "src": "Media/fm_music/ivory_tower/Funk Machine - Funk Me In The Bass.mp3",
+        "duration": "2:57",
+        "youtube": "https://youtu.be/l9hixjDfc6Y"
+      },
+      {
+        "name": "La La La",
+        "src": "Media/fm_music/ivory_tower/Funk Machine - La La La.mp3",
+        "duration": "3:37",
+        "youtube": "https://youtu.be/gXhKomVq9Uo"
+      },
+      {
+        "name": "The Ultimate Solution",
+        "src": "Media/fm_music/ivory_tower/Funk Machine - The Ultimate Solution.mp3",
+        "duration": "4:16",
+        "youtube": "https://youtu.be/rrgTrop_FaY"
+      },
+      {
+        "name": "Don't Do Drugs, Choom !",
+        "src": "Media/fm_music/ivory_tower/Funk Machine - Don't Do Drugs, Choom !.mp3",
+        "duration": "3:43",
+        "youtube": "https://youtu.be/FSV0S_6DVec"
+      },
+      {
+        "name": "Last Train",
+        "src": "Media/fm_music/ivory_tower/Funk Machine - Last Train.mp3",
+        "duration": "3:29",
+        "youtube": "https://youtu.be/Kc7ypYLTJBc"
+      },
+      {
+        "name": "Panthera",
+        "src": "Media/fm_music/ivory_tower/Funk Machine - Panthera.mp3",
+        "duration": "3:06",
+        "youtube": "https://youtu.be/Aeil5SUgikQ"
+      },
+      {
+        "name": "Everything Burns [Cover]",
+        "src": "Media/fm_music/ivory_tower/Funk Machine - Everything Burns [Cover].mp3",
+        "duration": "3:04",
+        "youtube": "https://youtu.be/f3LkYwpFnCw"
+      },
+      {
+        "name": "Fast Forward",
+        "src": "Media/fm_music/ivory_tower/Funk Machine - Fast Forward.mp3",
+        "duration": "4:06",
+        "youtube": "https://youtu.be/MSF84QuLMeM"
+      },
+      {
+        "name": "Life Is Short",
+        "src": "Media/fm_music/ivory_tower/Funk Machine - Life Is Short.mp3",
+        "duration": "3:12",
+        "youtube": "https://youtu.be/1iexai-H5CI"
+      },
+      {
+        "name": "Fighting Shadows",
+        "src": "Media/fm_music/ivory_tower/Funk Machine - Fighting Shadows.mp3",
+        "duration": "3:35",
+        "youtube": "https://youtu.be/RNdJR9KC2uU"
+      }
+    ]
+  },
+  "collabs": {
+    "name": "Collabs",
+    "image": "Media/Collabs_WLogo.png",
+    "tracks": [
+      {
+        "name": "Lucien X Funk Machine - Spark the Night",
+        "src": "Media/fm_music/collabs/Lucien X Funk Machine - Spark the Night.mp3",
+        "duration": "3:22",
+        "youtube": "https://youtu.be/CmaYXSV3yGY"
+      },
+      {
+        "name": "Nahrys X Funk Machine - Blood On The Dancefloor",
+        "src": "Media/fm_music/collabs/Nahrys X Funk Machine - Blood On The Dancefloor.mp3",
+        "duration": "3:14",
+        "youtube": ""
+      },
+      {
+        "name": "Dorothy Martin X Funk Machine - Funky Blues",
+        "src": "Media/fm_music/collabs/Dorothy Martin X Funk Machine - Funky Blues.mp3",
+        "duration": "4:26",
+        "youtube": ""
+      },
+      {
+        "name": "Ombre X Funk Machine - Thank You, Net (But Mean It)",
+        "src": "Media/fm_music/collabs/Ombre X Funk Machine - Thank You, Net (But Mean It).mp3",
+        "duration": "4:12",
+        "youtube": ""
+      },
+      {
+        "name": "HeX X Funk Machine - HeX Machine",
+        "src": "Media/fm_music/collabs/HeX X Funk Machine - HeX Machine.mp3",
+        "duration": "3:46",
+        "youtube": ""
+      },
+      {
+        "name": "HeX X Funk Machine - Live Obscene",
+        "src": "Media/fm_music/collabs/HeX X Funk Machine - Live Obscene.mp3",
+        "duration": "3:11",
+        "youtube": ""
+      }
+    ]
+  }
+}

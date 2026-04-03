@@ -1,5 +1,21 @@
+// Merch Data - Will be loaded from JSON
+let merchData = {};
+
+// Load merch data from JSON
+async function loadMerchData() {
+    try {
+        const response = await fetch('data/merch.json');
+        merchData = await response.json();
+        console.log('Merch data loaded successfully');
+    } catch (error) {
+        console.error('Error loading merch data:', error);
+    }
+}
+
 // Merch Image Lightbox
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
+    // Load merch data first
+    await loadMerchData();
     const lightbox = document.getElementById('imageLightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const closeBtn = document.querySelector('.lightbox-close');
@@ -50,17 +66,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const versions = {
         standard: {
-            image: 'Media/FunkMachine_F.png',
+            image: 'Media/fm_merch/images/FunkMachine_F.png',
             title: 'T-shirt [F]',
             size: '19 MO',
-            download: 'Media/Funk Machine t-shirt [F].pmp',
+            download: 'Media/fm_merch/Funk Machine t-shirt [F].pmp',
             compatibility: ['Bibo', 'Rue', 'Bimbo', 'Uranus', 'YAB', 'Lavabod & Larue', 'RUEXB+']
         },
         alt: {
-            image: 'Media/FunkMachine_FAlt.png',
+            image: 'Media/fm_merch/images/FunkMachine_FAlt.png',
             title: 'T-shirt [F-Alt]',
             size: '20 MO',
-            download: 'Media/Funk Machine t-shirt [F-Alt].pmp',
+            download: 'Media/fm_merch/Funk Machine t-shirt [F-Alt].pmp',
             compatibility: ['Rue', 'YAB', 'Lavabod & Larue']
         }
     };
@@ -116,17 +132,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const versionsRueYab = {
         standard: {
-            image: 'Media/FunkMachine_FRueYab.png',
+            image: 'Media/fm_merch/images/FunkMachine_FRueYab.png',
             title: 'T-shirt [F-Rue Yab]',
             size: '6 MO',
-            download: 'Media/Funk Machine t-shirt [FRue-Yab].pmp',
+            download: 'Media/fm_merch/Funk Machine t-shirt [FRue-Yab].pmp',
             compatibility: ['Rue', 'Yab']
         },
         alt: {
-            image: 'Media/FunkMachine_F_EXQBRue.png',
+            image: 'Media/fm_merch/images/FunkMachine_F_EXQBRue.png',
             title: 'T-shirt [F-EXQB Rue]',
             size: '2 MO',
-            download: 'Media/Funk Machine t-shirt [F-EXQB-Rue].pmp',
+            download: 'Media/fm_merch/Funk Machine t-shirt [F-EXQB-Rue].pmp',
             compatibility: ['EXQB', 'EXQBRue']
         }
     };

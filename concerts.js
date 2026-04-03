@@ -1,14 +1,69 @@
-// Concerts Discord Links Management and Past Concert Detection
-document.addEventListener('DOMContentLoaded', function() {
-    const concertsList = document.querySelector('.concerts-list');
-    const concertItems = Array.from(document.querySelectorAll('.concert-item'));
+// Concerts Data - Will be loaded from JSON
+let concertsData = {};
+
+// Load concerts data from JSON
+async function loadConcertsData() {
+    try {
+        const response = await fetch('data/concerts.json');
+        concertsData = await response.json();
+        console.log('Concerts data loaded successfully');
+    } catch (error) {
+        console.error('Error loading concerts data:', error);
+    }
+}
+
+// Generate concert HTML
+function generateConcertHTML(concert) {
+    const concertDate = new Date(concert.date);
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // Reset time to midnight for accurate date comparison
+    today.setHours(0, 0, 0, 0);
+    concertDate.setHours(0, 0, 0, 0);
+    const isPast = concertDate < today;
     
-    // Sort concerts by date: upcoming first (ascending), then past (descending)
-    concertItems.sort((a, b) => {
-        const dateA = new Date(a.dataset.date);
-        const dateB = new Date(b.dataset.date);
+    const months = ['JAN', 'FEV', 'MAR', 'AVR', 'MAI', 'JUN', 'JUL', 'AOU', 'SEP', 'OCT', 'NOV', 'DEC'];
+    const day = concertDate.getDate().toString().padStart(2, '0');
+    const month = months[concertDate.getMonth()];
+    const year = concertDate.getFullYear();
+    
+    const pastBadge = isPast ? '<span class="past-badge"><i class="fa-solid fa-check-circle"></i> Terminé</span>' : '';
+    const pastClass = isPast ? ' past-concert' : '';
+    
+    return `
+        <div class="concert-item${pastClass}" data-discord="${concert.discord}" data-date="${concert.date}">
+            <div class="concert-date">
+                <div class="date-day">${day}</div>
+                <div class="date-month">${month}</div>
+                <div class="date-year">${year}</div>
+            </div>
+            <div class="concert-details">
+                ${pastBadge}
+                <h3 class="concert-venue">${concert.venue}</h3>
+                <p class="concert-location">
+                    <svg class="location-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    ${concert.location}
+                </p>
+                <p class="concert-time">${concert.time}</p>
+            </div>
+            <div class="concert-actions">
+                <a href="${concert.discord}" class="concert-btn discord-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-discord"></i>
+                    Discord
+                </a>
+            </div>
+        </div>
+    `;
+}
+
+// Sort concerts by date
+function sortConcerts(concerts) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    return concerts.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
         dateA.setHours(0, 0, 0, 0);
         dateB.setHours(0, 0, 0, 0);
         
@@ -27,51 +82,22 @@ document.addEventListener('DOMContentLoaded', function() {
         // If both are past, sort by most recent first (descending)
         return dateB - dateA;
     });
+}
+
+// Initialize concerts
+document.addEventListener('DOMContentLoaded', async function() {
+    // Load concerts data
+    await loadConcertsData();
     
-    // Reorder DOM elements
-    concertItems.forEach(item => {
-        concertsList.appendChild(item);
-    });
+    const concertsList = document.querySelector('.concerts-list');
     
-    // Process each concert item
-    concertItems.forEach(item => {
-        const discordUrl = item.dataset.discord;
-        const discordBtn = item.querySelector('.discord-btn');
-        const concertDateStr = item.dataset.date;
+    if (concertsData.concerts && concertsList) {
+        // Sort concerts
+        const sortedConcerts = sortConcerts(concertsData.concerts);
         
-        // Check if concert date is in the past
-        if (concertDateStr) {
-            const concertDate = new Date(concertDateStr);
-            concertDate.setHours(0, 0, 0, 0);
-            
-            if (concertDate < today) {
-                // Add 'past-concert' class for styling
-                item.classList.add('past-concert');
-                
-                // Add a "Terminé" badge
-                const concertDetails = item.querySelector('.concert-details');
-                if (concertDetails && !item.querySelector('.past-badge')) {
-                    const badge = document.createElement('span');
-                    badge.className = 'past-badge';
-                    badge.innerHTML = '<i class="fa-solid fa-check-circle"></i> Terminé';
-                    concertDetails.insertBefore(badge, concertDetails.firstChild);
-                }
-            }
-        }
+        // Generate and insert HTML
+        concertsList.innerHTML = sortedConcerts.map(concert => generateConcertHTML(concert)).join('');
         
-        // Discord button management
-        if (!discordUrl || discordUrl.trim() === '') {
-            // Hide the button if no Discord URL is provided
-            if (discordBtn) {
-                discordBtn.style.display = 'none';
-            }
-        } else {
-            // Set the Discord URL to the button
-            if (discordBtn) {
-                discordBtn.href = discordUrl;
-                discordBtn.target = '_blank';
-                discordBtn.rel = 'noopener noreferrer';
-            }
-        }
-    });
+        console.log(`${sortedConcerts.length} concerts loaded and displayed`);
+    }
 });

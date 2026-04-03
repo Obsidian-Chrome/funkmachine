@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "id": "tshirt-m",
+      "type": "single",
+      "image": "Media/fm_merch/images/FunkMachine_M.png",
+      "title": "T-shirt [M]",
+      "size": "20 MO",
+      "format": "PMP",
+      "download": "Media/fm_merch/Funk Machine t-shirt [M].pmp",
+      "compatibility": ["Bibo", "Hrbody"]
+    },
+    {
+      "id": "tshirt-f",
+      "type": "switchable",
+      "versions": {
+        "standard": {
+          "image": "Media/fm_merch/images/FunkMachine_FunkMachine_F.png",
+          "title": "T-shirt [F]",
+          "size": "19 MO",
+          "download": "Media/fm_merch/Funk Machine t-shirt [F].pmp",
+          "compatibility": ["Bibo", "Rue", "Bimbo", "Uranus", "YAB", "Lavabod & Larue", "RUEXB+"]
+        },
+        "alt": {
+          "image": "Media/fm_merch/images/FunkMachine_FAlt.png",
+          "title": "T-shirt [F-Alt]",
+          "size": "20 MO",
+          "download": "Media/fm_merch/Funk Machine t-shirt [F-Alt].pmp",
+          "compatibility": ["Rue", "YAB", "Lavabod & Larue"]
+        }
+      }
+    },
+    {
+      "id": "tshirt-rueyab",
+      "type": "switchable",
+      "versions": {
+        "standard": {
+          "image": "Media/fm_merch/images/FunkMachine_FRueYab.png",
+          "title": "T-shirt [F-Rue Yab]",
+          "size": "6 MO",
+          "download": "Media/fm_merch/Funk Machine t-shirt [FRue-Yab].pmp",
+          "compatibility": ["Rue", "Yab"]
+        },
+        "alt": {
+          "image": "Media/fm_merch/images/FunkMachine_F_EXQBRue.png",
+          "title": "T-shirt [F-EXQB Rue]",
+          "size": "2 MO",
+          "download": "Media/fm_merch/Funk Machine t-shirt [F-EXQB-Rue].pmp",
+          "compatibility": ["EXQB", "EXQBRue"]
+        }
+      }
+    },
+    {
+      "id": "tshirt-mhr",
+      "type": "single",
+      "image": "Media/fm_merch/images/FunkMachine_MHR.png",
+      "title": "T-shirt [M-HR]",
+      "size": "2 MO",
+      "format": "PMP",
+      "download": "Media/fm_merch/Funk Machine t-shirt [M-HR].pmp",
+      "compatibility": ["Hrothgar"]
+    },
+    {
+      "id": "sunglasses",
+      "type": "single",
+      "image": "Media/fm_merch/images/FunkMachine_Lunettes.png",
+      "title": "Lunettes",
+      "size": "1 MO",
+      "format": "PMP",
+      "download": "Media/fm_merch/Funk Machine sunglasses.pmp",
+      "compatibility": ["Tous"]
+    }
+  ]
+}
