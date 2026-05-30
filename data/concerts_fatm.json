@@ -26,5 +26,26 @@
     "location": "La Coupe 3 - 12 | Moogle",
     "time": "Horaires : 21h00 - 23h00 | Concert : 21h00",
     "discord": "https://discord.gg/kEM2T2DZzw"
+  },
+  {
+    "date": "2026-05-30",
+    "venue": "Onkochishin",
+    "location": "Lavandière 22 - 27 | Moogle",
+    "time": "Horaires : 20h30 - 00h00 | Concert : 22h00",
+    "discord": "https://discord.gg/nhTF2hg3uG"
+  },
+  {
+    "date": "2026-06-18",
+    "venue": "Le Perchoir",
+    "location": "Empyrée 23 - 11 | Ragnarok",
+    "time": "Horaires : 21h00 - 00h00 | Concert : 21h30",
+    "discord": "https://discord.gg/znxm6HhpMa"
+  },
+  {
+    "date": "2026-06-20",
+    "venue": "Paradox",
+    "location": "La Coupe 10 - 8 | Moogle",
+    "time": "Horaires : 20h30 - 01h00 | Concert : 21h00",
+    "discord": "https://discord.gg/9MaAJ3WnYC"
   }
 ]
