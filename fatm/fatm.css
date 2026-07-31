@@ -2347,3 +2347,44 @@ body {
         font-size: 0.9rem;
     }
 }
+
+/* Aetherphone & Radio banner */
+.aetherphone-banner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+    padding: 12px 24px;
+    background: rgba(217, 70, 239, 0.08);
+    border: 1px solid var(--neon-cyan);
+    border-radius: 50px;
+    color: var(--text-secondary);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(217, 70, 239, 0.15);
+    backdrop-filter: blur(5px);
+    max-width: 90%;
+    line-height: 1.5;
+}
+
+.aetherphone-banner i {
+    color: var(--neon-cyan);
+    font-size: 1.3rem;
+    filter: drop-shadow(0 0 5px var(--neon-cyan));
+}
+
+.aetherphone-banner .separator {
+    color: var(--neon-cyan);
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.aetherphone-banner strong {
+    color: var(--neon-cyan);
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(217, 70, 239, 0.4);
+}
